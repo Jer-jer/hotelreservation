@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="HRS Reservations" max_length="40" name="x_881199_hotel_res_hotel_reservations" sizeclass="1" type="collection">
+        <element label="Adults" max_length="40" name="adults" type="integer"/>
+        <element label="Check-in" max_length="40" name="check_in" type="calendar_date_time"/>
+        <element label="Check-out" max_length="40" name="check_out" type="calendar_date_time"/>
+        <element label="Children" max_length="40" name="children" type="integer"/>
+        <element label="Days" max_length="40" name="days" type="integer"/>
+        <element label="Guest Name" max_length="40" name="guest_name" type="string"/>
+        <element display="true" label="Room" max_length="40" name="room" reference="x_881199_hotel_res_hrs_rooms" type="string"/>
+        <element choice="3" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Ongoing" sequence="1" value="ongoing"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="2" value="cancelled"/>
+                <element inactive_on_update="false" label="Done" sequence="3" value="done"/>
+                <element inactive_on_update="false" label="Expired" sequence="4" value="expired"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Total Payment" max_length="38" name="total_payment" type="price"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
