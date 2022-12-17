@@ -8,21 +8,21 @@
         <internal>false</internal>
         <omit_watcher>false</omit_watcher>
         <public>true</public>
-        <roles>admin</roles>
+        <roles>x_881199_hotel_res.users</roles>
         <seo_script/>
         <short_description>Users page, for admin use only</short_description>
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-15 11:02:59</sys_created_on>
         <sys_id>66d4225d2ff751100c1058492799b6b8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>hrs_users</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_page_66d4225d2ff751100c1058492799b6b8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-15 11:02:59</sys_updated_on>
+        <sys_updated_on>2022-12-17 09:58:17</sys_updated_on>
         <title>HRS Users</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>

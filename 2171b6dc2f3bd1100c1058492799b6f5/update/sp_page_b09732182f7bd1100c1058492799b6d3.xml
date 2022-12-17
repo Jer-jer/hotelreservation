@@ -36,21 +36,21 @@
         <internal>false</internal>
         <omit_watcher>false</omit_watcher>
         <public>true</public>
-        <roles/>
+        <roles>x_881199_hotel_res.users</roles>
         <seo_script/>
         <short_description>Gallery of Bay Hotel</short_description>
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 09:50:12</sys_created_on>
         <sys_id>b09732182f7bd1100c1058492799b6d3</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>hrs_gallery</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_page_b09732182f7bd1100c1058492799b6d3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-13 13:19:48</sys_updated_on>
+        <sys_updated_on>2022-12-17 09:16:06</sys_updated_on>
         <title>HRS Gallery</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>
