@@ -20,21 +20,21 @@ main.body[data-page-title="HRS Landing Page"] {
         <internal>false</internal>
         <omit_watcher>false</omit_watcher>
         <public>true</public>
-        <roles/>
+        <roles>x_881199_hotel_res.users</roles>
         <seo_script/>
         <short_description>Landing Page of Bay Hotel</short_description>
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 09:50:55</sys_created_on>
         <sys_id>1bb776182f7bd1100c1058492799b66b</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>hrs_landing_page</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_page_1bb776182f7bd1100c1058492799b66b</sys_update_name>
-        <sys_updated_by>andy.m</sys_updated_by>
-        <sys_updated_on>2022-12-13 12:04:35</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-17 09:55:51</sys_updated_on>
         <title>HRS Landing Page</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="HRS Dates" max_length="40" name="x_881199_hotel_res_dates" sizeclass="0" type="collection">
         <element label="Date" max_length="40" name="date" type="calendar_date_time"/>
-        <element label="Event" max_length="40" name="event" type="string"/>
+        <element label="Reason" mandatory="true" max_length="250" name="reason" type="string"/>
     </element>
 </database>
