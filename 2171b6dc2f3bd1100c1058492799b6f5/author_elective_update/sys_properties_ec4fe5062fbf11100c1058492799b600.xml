@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_881199_hotel_res.glide.entry.first.page.script</name>
+        <read_roles>x_881199_hotel_res.hrs_admin</read_roles>
+        <suffix>glide.entry.first.page.script</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-17 15:06:09</sys_created_on>
+        <sys_id>ec4fe5062fbf11100c1058492799b600</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_881199_hotel_res.glide.entry.first.page.script</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sys_properties_ec4fe5062fbf11100c1058492799b600</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-17 15:06:09</sys_updated_on>
+        <type>string</type>
+        <value>new SPEntryPage().getFirstPageURL()</value>
+        <write_roles>x_881199_hotel_res.hrs_admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=ec4fe5062fbf11100c1058492799b600"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sys_properties_ec4fe5062fbf11100c1058492799b600</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description/><ignore_cache>true</ignore_cache><is_private>false</is_private><name>x_881199_hotel_res.glide.entry.first.page.script</name><read_roles>x_881199_hotel_res.hrs_admin</read_roles><suffix>glide.entry.first.page.script</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-12-17 15:06:09</sys_created_on><sys_id>ec4fe5062fbf11100c1058492799b600</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_881199_hotel_res.glide.entry.first.page.script</sys_name><sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package><sys_policy/><sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope><sys_update_name>sys_properties_ec4fe5062fbf11100c1058492799b600</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-12-17 15:06:09</sys_updated_on><type>string</type><value>new SPEntryPage().getFirstPageURL()</value><write_roles>x_881199_hotel_res.hrs_admin</write_roles></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=ec4fe5062fbf11100c1058492799b600"/></record_update>]]></payload>
+        <payload_hash>1171080730</payload_hash>
+        <record_name>x_881199_hotel_res.glide.entry.first.page.script</record_name>
+        <reverted_from/>
+        <source>abdf80c62f3b11100c1058492799b665</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-17 15:06:10</sys_created_on>
+        <sys_id>39dfe9062fbf11100c1058492799b62c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185209f03060000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-17 15:06:10</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>71dfe90652bf111053a3dabecda3952c</update_guid>
+        <update_guid_history>71dfe90652bf111053a3dabecda3952c:1171080730</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-17 15:54:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>1279f7a8964848bcb3534518043a5210</sys_id>
+        <sys_metadata>ec4fe5062fbf11100c1058492799b600</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_881199_hotel_res.glide.entry.first.page.script</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sys_properties_ec4fe5062fbf11100c1058492799b600</sys_update_name>
+        <sys_update_version display_value="sys_properties_ec4fe5062fbf11100c1058492799b600">39dfe9062fbf11100c1058492799b62c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-17 15:54:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

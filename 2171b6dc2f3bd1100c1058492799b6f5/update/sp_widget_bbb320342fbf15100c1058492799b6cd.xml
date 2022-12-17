@@ -4,35 +4,22 @@
         <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
         <controller_as>c</controller_as>
         <css>.rsvp_container {
-	text-align: center;
-  margin: 0;
+	display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.icon{
+	align-item: center;
+  margin-top: 30px;
+	padding: 0 5px;
+  display: flex;
+  color: black;
+}
+.btn{
+  cursor: pointer;
 }
 h1{
-  color: black;
-	font-family: 'DM Sans', sans-serif;
-  font-weight: bold;
-  font-size: 5rem;
-  display: inline-block;
-}
-.btn1{
-	background-color: gray;
-  border: none;
-  color: white;
-  padding: 5px 22px;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.btn2{
-background-color: gray;
-  border: none;
-  color: white;
-  padding: 5px 22px;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+	color: black;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -53,20 +40,34 @@ background-color: gray;
         <sys_created_by>andy.m</sys_created_by>
         <sys_created_on>2022-12-13 12:21:18</sys_created_on>
         <sys_id>bbb320342fbf15100c1058492799b6cd</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>68</sys_mod_count>
         <sys_name>HRS Dashboard Title</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_bbb320342fbf15100c1058492799b6cd</sys_update_name>
         <sys_updated_by>andy.m</sys_updated_by>
-        <sys_updated_on>2022-12-13 13:42:04</sys_updated_on>
+        <sys_updated_on>2022-12-17 12:47:49</sys_updated_on>
         <template><![CDATA[<div class="rsvp_container">
   <h1>
     Reservations
   </h1>
-  <button class="btn1">Edit</button>
-	<button class="btn2">Add</button>
+  <div class="d-flex flex-row">
+    <div class="icon">
+      <button class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+  			<path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+			</svg>
+      </button>
+    </div>
+    <div class="icon">
+      <button class="btn">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+  			<path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+			</svg>
+      </button>
+    </div>
+  </div>
 </div>]]></template>
     </sp_widget>
 </record_update>
