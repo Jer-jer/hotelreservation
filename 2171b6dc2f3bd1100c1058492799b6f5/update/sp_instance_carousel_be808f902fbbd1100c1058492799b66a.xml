@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel">
+    <sp_instance_carousel action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <interval>5000</interval>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">f49772182f7bd1100c1058492799b6e5</sp_column>
+        <sp_widget display_value="HRS Carousel">e3197e582f7bd1100c1058492799b681</sp_widget>
+        <sys_class_name>sp_instance_carousel</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-12 10:29:24</sys_created_on>
+        <sys_id>be808f902fbbd1100c1058492799b66a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_instance_carousel_be808f902fbbd1100c1058492799b66a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-12 10:29:24</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_carousel>
+    <sys_translated_text action="delete_multiple" query="documentkey=be808f902fbbd1100c1058492799b66a"/>
+</record_update>

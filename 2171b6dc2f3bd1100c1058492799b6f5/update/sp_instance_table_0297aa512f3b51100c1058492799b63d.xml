@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">23c762912f3b51100c1058492799b6e0</sp_column>
+        <sp_page/>
+        <sp_widget display_value="HRS Reservations Table">d82dba9c2f7bd1100c1058492799b65c</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-15 11:14:19</sys_created_on>
+        <sys_id>0297aa512f3b51100c1058492799b63d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>HRS Reservations Instance</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_instance_table_0297aa512f3b51100c1058492799b63d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-15 11:15:16</sys_updated_on>
+        <table>x_881199_hotel_res_hotel_reservations</table>
+        <title>HRS Reservations Instance</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=0297aa512f3b51100c1058492799b63d"/>
+</record_update>

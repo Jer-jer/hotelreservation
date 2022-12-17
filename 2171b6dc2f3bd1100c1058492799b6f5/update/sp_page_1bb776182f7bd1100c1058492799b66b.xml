@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap');
+
+main.body[data-page-title="HRS Landing Page"] {
+	background-image: url("https://pix10.agoda.net/hotelImages/6532356/-1/8735241712040cf6b22c01cc035dc185.jpg?ca=8&amp;ce=1&amp;s=1024x768")!important;
+	background-size: cover;	
+  	background-repeat: no-repeat;
+  margin-left: 0px;
+	padding-left: 101px;
+  	padding-right: 101px;
+  	background-color: rgba(247, 248, 252, 0.73);
+  	height: 100%;
+    margin-top: -2vh;
+}</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>hrs_landing_page</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>true</public>
+        <roles/>
+        <seo_script/>
+        <short_description>Landing Page of Bay Hotel</short_description>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-12 09:50:55</sys_created_on>
+        <sys_id>1bb776182f7bd1100c1058492799b66b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>hrs_landing_page</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_page_1bb776182f7bd1100c1058492799b66b</sys_update_name>
+        <sys_updated_by>andy.m</sys_updated_by>
+        <sys_updated_on>2022-12-13 12:04:35</sys_updated_on>
+        <title>HRS Landing Page</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=1bb776182f7bd1100c1058492799b66b"/>
+</record_update>

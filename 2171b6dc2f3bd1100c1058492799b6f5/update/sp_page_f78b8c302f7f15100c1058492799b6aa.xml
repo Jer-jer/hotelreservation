@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css>main.body[data-page-title="HRS Landing Schedules"] {&#13;
+	background-image: url(https://pix10.agoda.net/hotelImages/6532356/-1/8735241712040cf6b22c01cc035dc185.jpg?ca=8&amp;ce=1&amp;s=1024x768)!important;&#13;
+    background-size: cover;&#13;
+    background-repeat: no-repeat;&#13;
+  	height: 100vh;&#13;
+  	overflow: hidden;&#13;
+&#13;
+}&#13;
+&#13;
+.schedule-card {&#13;
+  	background-color: rgba(247, 248, 252, .73)!important;&#13;
+    width: inherit;&#13;
+    height: inherit;&#13;
+  	margin-top: -2vh;&#13;
+}&#13;
+&#13;
+.hrs-schedule-title {&#13;
+  	padding-top: 6vh;&#13;
+  	padding-bottom: 28px;&#13;
+  	padding-left: 101px;&#13;
+  	padding-right: 101px;&#13;
+}&#13;
+&#13;
+.scd-cards {&#13;
+  	padding-left: 0px;&#13;
+  	padding-right: 101px;&#13;
+  	left: -2rem;&#13;
+}</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>hrs_u_landing_sched</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>true</public>
+        <roles/>
+        <seo_script/>
+        <short_description>Landing Page Schedule for Bay Hotel</short_description>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-13 10:41:26</sys_created_on>
+        <sys_id>f78b8c302f7f15100c1058492799b6aa</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>hrs_u_landing_sched</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_page_f78b8c302f7f15100c1058492799b6aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-14 11:46:15</sys_updated_on>
+        <title>HRS Landing Schedules</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=f78b8c302f7f15100c1058492799b6aa"/>
+</record_update>

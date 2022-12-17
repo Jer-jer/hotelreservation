@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.rsvp_container {
+	text-align: center;
+  margin: 0;
+}
+h1{
+  color: black;
+	font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  display: inline-block;
+}
+.btn1{
+	background-color: gray;
+  border: none;
+  color: white;
+  padding: 5px 22px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn2{
+background-color: gray;
+  border: none;
+  color: white;
+  padding: 5px 22px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hrs_dashboard_title</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>HRS Dashboard Title</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>andy.m</sys_created_by>
+        <sys_created_on>2022-12-13 12:21:18</sys_created_on>
+        <sys_id>bbb320342fbf15100c1058492799b6cd</sys_id>
+        <sys_mod_count>59</sys_mod_count>
+        <sys_name>HRS Dashboard Title</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_widget_bbb320342fbf15100c1058492799b6cd</sys_update_name>
+        <sys_updated_by>andy.m</sys_updated_by>
+        <sys_updated_on>2022-12-13 13:42:04</sys_updated_on>
+        <template><![CDATA[<div class="rsvp_container">
+  <h1>
+    Reservations
+  </h1>
+  <button class="btn1">Edit</button>
+	<button class="btn2">Add</button>
+</div>]]></template>
+    </sp_widget>
+</record_update>

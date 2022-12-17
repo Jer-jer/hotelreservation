@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>HRS Landing Schedules - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="hrs_u_landing_sched">f78b8c302f7f15100c1058492799b6aa</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-14 07:00:32</sys_created_on>
+        <sys_id>72e3e0012fb311100c1058492799b61a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Landing Schedules - Container 2</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_container_72e3e0012fb311100c1058492799b61a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-14 07:00:32</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sp_container_72e3e0012fb311100c1058492799b61a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>HRS Landing Schedules - Container 2</name><order>2</order><sp_page display_value="hrs_u_landing_sched">f78b8c302f7f15100c1058492799b6aa</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-12-14 07:00:32</sys_created_on><sys_id>72e3e0012fb311100c1058492799b61a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>HRS Landing Schedules - Container 2</sys_name><sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package><sys_policy/><sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope><sys_update_name>sp_container_72e3e0012fb311100c1058492799b61a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-12-14 07:00:32</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-747906217</payload_hash>
+        <record_name>HRS Landing Schedules - Container 2</record_name>
+        <reverted_from/>
+        <source>2571b6dc2f3bd1100c1058492799b6f7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-14 07:00:32</sys_created_on>
+        <sys_id>f6e3e0012fb311100c1058492799b61c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1850f6f53840000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-14 07:00:32</sys_updated_on>
+        <type>Container</type>
+        <update_guid>32e3e001a5b311108a3bf25a2285691c</update_guid>
+        <update_guid_history>32e3e001a5b311108a3bf25a2285691c:-747906217</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HRS Landing Schedules - Container 2">7cd564412fb311100c1058492799b657</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-14 07:08:52</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>7f96c9fa612544a7ae3cf133bd950821</sys_id>
+        <sys_metadata>72e3e0012fb311100c1058492799b61a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Landing Schedules - Container 2</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sp_container_72e3e0012fb311100c1058492799b61a</sys_update_name>
+        <sys_update_version display_value="sp_container_72e3e0012fb311100c1058492799b61a">f6e3e0012fb311100c1058492799b61c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-14 07:08:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

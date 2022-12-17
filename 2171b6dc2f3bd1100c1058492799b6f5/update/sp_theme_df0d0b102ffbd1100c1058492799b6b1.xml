@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>// Font-family&#13;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap');&#13;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap');&#13;
+&#13;
+// Main Colors&#13;
+$gray: #363740;&#13;
+$white: #F7F8FC;&#13;
+$blue: #2C41CC;&#13;
+$green: #47682C;&#13;
+$orange: #C84630;&#13;
+&#13;
+// Hover&#13;
+$hover-base: $blue;&#13;
+&#13;
+// Success, Ok&#13;
+$success-base: $green;&#13;
+&#13;
+// Warning, Caution, Error&#13;
+$warning-base: $orange&#13;
+</css_variables>
+        <footer/>
+        <footer_fixed>true</footer_fixed>
+        <header display_value="HRS Stock Header">701e3adc2f7bd1100c1058492799b6fd</header>
+        <name>HRS Theme</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-12 11:24:34</sys_created_on>
+        <sys_id>df0d0b102ffbd1100c1058492799b6b1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>HRS Theme</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_theme_df0d0b102ffbd1100c1058492799b6b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-13 13:20:14</sys_updated_on>
+    </sp_theme>
+</record_update>
