@@ -448,7 +448,107 @@
 	}
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.panel-heading {
+  padding-left: 8px;
+  border-color: transparent;
+}
+
+thead {
+  border-bottom: 1px solid #ddd;
+}
+
+table {
+  margin-bottom: 0;
+}
+
+.table &gt; thead &gt; tr &gt; th {
+  border: 1px solid transparent;
+  cursor: pointer;
+  vertical-align: middle;
+
+  &amp;:nth-child(2) {
+    border-left: none;
+  }
+
+
+
+  &amp;:last-child {
+    border-right: none;
+  }
+}
+
+th i {
+  display: inline-block;
+  margin-left: 5px;
+  color: #A0A0A0;
+}
+
+div.data-table-high-contrast th i {
+ color: #363740; 
+}
+
+th .disabled{
+  color:#ddd;
+}
+
+.th-title {
+  display: inline-block;
+  color: #bdbdbd;
+}
+
+.sp-list-cell {
+  padding: 1.5rem;
+  width: 100px;
+  white-space: pre-wrap;
+}
+
+td span {
+  color: #363740;
+}
+
+.panel-body {
+  overflow: auto;
+  padding: 0px;
+}
+
+
+.selected {
+  color: #fff;
+  background-color: $data-table-selected;
+  border-color: 1px solid #fff;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+.pruned-msg {
+  padding-bottom: 10px;
+  padding-left: 4px;
+  text-align: center;
+}
+
+.pruned-msg-filter-pad {
+  padding-top:8px;
+}
+
+.filter-breadcrumbs {
+  padding-top: 3px;
+}
+
+.filter-breadcrumbs ~ .table {
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-toggle {
+  background: none;
+  padding: 0 0 4px 0;
+}
+
+.btn-group a {
+  background-color: #f5f5f5!important;
+  border-color: transparent!important;
+}</css>
         <data_table>sp_instance_table</data_table>
         <demo_data/>
         <description/>
@@ -702,15 +802,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 10:17:13</sys_created_on>
         <sys_id>e8cd72102fbbd1100c1058492799b62e</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>HRS Rooms Table</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_e8cd72102fbbd1100c1058492799b62e</sys_update_name>
-        <sys_updated_by>kashmel.g</sys_updated_by>
-        <sys_updated_on>2022-12-14 14:36:13</sys_updated_on>
-        <template><![CDATA[<div class="panel panel-{{options.color}} b" ng-class="{'data-table-high-contrast': accessibilityModeEnabled}">
+        <sys_updated_by>andy.m</sys_updated_by>
+        <sys_updated_on>2022-12-19 13:54:30</sys_updated_on>
+        <template><![CDATA[  <div class="panel panel-{{options.color}} b" ng-class="{'data-table-high-contrast': accessibilityModeEnabled}">
     <div class="panel-heading form-inline" ng-hide="options.hide_header">
       <span class="dropdown m-r-xs">
         <button aria-label="{{data.title || data.table_plural}} ${Context Menu}" class="btn dropdown-toggle glyphicon glyphicon-menu-hamburger" style="line-height: 1.4em" id="optionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -722,7 +822,7 @@
         </ul>
       </span>
       <h2 class="panel-title" style="display:inline"><i ng-if="options.glyph" class="fa fa-{{options.glyph}} m-r"></i>{{data.title || data.table_plural}}<span class="sr-only">${table} - ${page} {{data.p}}</span></h2>
-      <button name="new" role="button" class="btn btn-primary btn-sm m-l-xs" ng-click="newRecord()" ng-if="options.show_new && data.canCreate && !data.newButtonUnsupported" aria-label="${Create new record}">${New}</button>
+      <button name="new" role="button" class="btn btn-primary btn-sm m-l-xs" ng-click="newRecord()" aria-label="${Create new record}">${Book}</button>
       <div class="pull-right" ng-if="options.show_keywords">
 		<form ng-if="data.hasTextIndex" ng-submit="setSearch(true)">
         <div class="input-group" role="presentation">
