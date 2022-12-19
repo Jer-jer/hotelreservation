@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="years_of_experience" label="Years of Experience" language="en" table="x_881199_hotel_res_hrs_accounts">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>years_of_experience</element>
+            <help/>
+            <hint/>
+            <label>Years of Experience</label>
+            <language>en</language>
+            <name>x_881199_hotel_res_hrs_accounts</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-18 09:28:40</sys_created_on>
+            <sys_id>7b2c29922f7f51100c1058492799b6ff</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Years of Experience</sys_name>
+            <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+            <sys_update_name>sys_documentation_x_881199_hotel_res_hrs_accounts_years_of_experience_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-18 09:28:43</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

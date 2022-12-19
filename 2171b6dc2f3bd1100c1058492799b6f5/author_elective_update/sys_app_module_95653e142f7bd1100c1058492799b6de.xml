@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Hotel Reservation System">fc65f6902f7bd1100c1058492799b658</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>SEPARATOR</link_type>
+        <map_page/>
+        <mobile_title>HRS Sports Activities</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>7</order>
+        <override_menu_roles>true</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>admin,x_881199_hotel_res.hrs_admin,x_881199_hotel_res.receptionists</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>miguel.b</sys_created_by>
+        <sys_created_on>2022-12-12 09:40:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>95653e142f7bd1100c1058492799b6de</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>HRS Sports Activities</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sys_app_module_95653e142f7bd1100c1058492799b6de</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-17 20:13:14</sys_updated_on>
+        <timeline_page/>
+        <title>HRS Sports Activities</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sys_app_module_95653e142f7bd1100c1058492799b6de</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Hotel Reservation System">fc65f6902f7bd1100c1058492799b658</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><mobile_title>HRS Sports Activities</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>7</order><override_menu_roles>true</override_menu_roles><query/><report/><roles>admin,x_881199_hotel_res.hrs_admin,x_881199_hotel_res.receptionists</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>miguel.b</sys_created_by><sys_created_on>2022-12-12 09:40:40</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>95653e142f7bd1100c1058492799b6de</sys_id><sys_mod_count>2</sys_mod_count><sys_name>HRS Sports Activities</sys_name><sys_overrides/><sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package><sys_policy/><sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope><sys_update_name>sys_app_module_95653e142f7bd1100c1058492799b6de</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-12-17 20:13:14</sys_updated_on><timeline_page/><title>HRS Sports Activities</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-859322956</payload_hash>
+        <record_name>HRS Sports Activities</record_name>
+        <reverted_from/>
+        <source>d2fe4d922ffb51100c1058492799b6b2</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-18 07:21:11</sys_created_on>
+        <sys_id>900f01d22ffb51100c1058492799b60e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185241bae360000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-18 07:21:11</sys_updated_on>
+        <type>Module</type>
+        <update_guid>7b16f20ad8b3511084b4c684a66dba1e</update_guid>
+        <update_guid_history>7b16f20ad8b3511084b4c684a66dba1e:-859322956,aace8592ddfb51109ac0813f623bc425:0,7b16f20ad8b3511084b4c684a66dba1e:-859322956,3323948a8b3b11106f3e7f126aa37f29:1512054163,c1ca2c8257bb111052875825c601f84b:0,3323948a8b3b11106f3e7f126aa37f29:1512054163,114aac42a9bb1110dca51bf8122120d2:0,3323948a8b3b11106f3e7f126aa37f29:1512054163,d9653e14d37bd11056eb3052abdcfddf:1867302320</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HRS Sports Activities">df3a91122f3f51100c1058492799b66e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-18 08:10:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>8ee3d8812b214ba09916a9d57368f990</sys_id>
+        <sys_metadata>95653e142f7bd1100c1058492799b6de</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Sports Activities</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sys_app_module_95653e142f7bd1100c1058492799b6de</sys_update_name>
+        <sys_update_version display_value="sys_app_module_95653e142f7bd1100c1058492799b6de">900f01d22ffb51100c1058492799b60e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-18 08:10:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

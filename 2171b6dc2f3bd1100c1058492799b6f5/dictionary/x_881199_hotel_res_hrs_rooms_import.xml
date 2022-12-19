@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="HRS Rooms Import" max_length="40" name="x_881199_hotel_res_hrs_rooms_import" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Availability" label="Availability" max_length="40" name="u_availability" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Capacity" label="Capacity" max_length="40" name="u_capacity" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Number" label="Number" max_length="40" name="u_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Room Name" label="Room Name" max_length="40" name="u_room_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Room Rate" label="Room Rate" max_length="40" name="u_room_rate" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Room Type" label="Room Type" max_length="40" name="u_room_type" type="string"/>
+    </element>
+</database>
