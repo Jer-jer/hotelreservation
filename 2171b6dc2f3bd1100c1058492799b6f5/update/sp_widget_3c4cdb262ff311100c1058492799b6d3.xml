@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hrs_user_reservation</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>HRS User Reservation</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	var grreservation = new GlideRecord('x_881199_hotel_res_hotel_reservations') ; 
+	
+	grreservation.addQuery('guest_name', gs.getUserDisplayName());
+	grreservation.orderByDesc('sys_created_on');
+	grreservation.setLimit(1);
+	grreservation.query();
+	
+	var data={};
+	
+	while(grreservation.next()){
+
+		data.guestname = grreservation.guest_name;
+		data.checkin = grreservation.check_in;
+		data.checkout = grreservation.check_out;
+		data.days = grreservation.days;
+	}
+	gs.addInfoMessage(data.guestname)
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>kashmel.g</sys_created_by>
+        <sys_created_on>2022-12-19 12:16:49</sys_created_on>
+        <sys_id>3c4cdb262ff311100c1058492799b6d3</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_name>HRS User Reservation</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_widget_3c4cdb262ff311100c1058492799b6d3</sys_update_name>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-19 14:17:25</sys_updated_on>
+        <template><![CDATA[<div>
+  <h1>
+    Hello! {{data.guestname}}
+  </h1>
+  <h1>
+    {{data.checkout}}
+  </h1>
+  <h1>
+    {{data.checkin}}
+  </h1>
+  <h1>
+    {{data.days}}
+  </h1>
+</div>]]></template>
+    </sp_widget>
+</record_update>
