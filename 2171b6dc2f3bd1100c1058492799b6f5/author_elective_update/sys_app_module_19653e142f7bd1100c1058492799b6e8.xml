@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Hotel Reservation System">fc65f6902f7bd1100c1058492799b658</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>All</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_881199_hotel_res_hrs_user_profile</name>
+        <order>12</order>
+        <override_menu_roles>true</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>admin,x_881199_hotel_res.admin</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>miguel.b</sys_created_by>
+        <sys_created_on>2022-12-12 09:40:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>19653e142f7bd1100c1058492799b6e8</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>All</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sys_app_module_19653e142f7bd1100c1058492799b6e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-18 08:58:01</sys_updated_on>
+        <timeline_page/>
+        <title>All</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sys_app_module_19653e142f7bd1100c1058492799b6e8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Hotel Reservation System">fc65f6902f7bd1100c1058492799b658</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>All</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_881199_hotel_res_hrs_user_profile</name><order>12</order><override_menu_roles>true</override_menu_roles><query/><report/><roles>admin,x_881199_hotel_res.admin</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>miguel.b</sys_created_by><sys_created_on>2022-12-12 09:40:41</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>19653e142f7bd1100c1058492799b6e8</sys_id><sys_mod_count>4</sys_mod_count><sys_name>All</sys_name><sys_overrides/><sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package><sys_policy/><sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope><sys_update_name>sys_app_module_19653e142f7bd1100c1058492799b6e8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-12-18 08:58:01</sys_updated_on><timeline_page/><title>All</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-79801332</payload_hash>
+        <record_name>All</record_name>
+        <reverted_from/>
+        <source>abdf80c62f3b11100c1058492799b665</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-18 08:58:01</sys_created_on>
+        <sys_id>f62521da2f3f51100c1058492799b6e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185247455380000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-18 08:58:01</sys_updated_on>
+        <type>Module</type>
+        <update_guid>322521da1e3f51100909d202c156ace7</update_guid>
+        <update_guid_history>322521da1e3f51100909d202c156ace7:-79801332,3c84fa86b4b3511032e99e8c74da4d1c:-1414957092,2ace4592b5fb5110d651f3f735add9ed:0,3c84fa86b4b3511032e99e8c74da4d1c:-1414957092,3e63fa46f6b3511069bba0c789e0b0c6:1084490375,8c41f6c275b35110b8f82ba947c4500d:-629412572,1d653e14ee7bd11082a6f06555399be9:459282707</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="All">751a65122f7f51100c1058492799b68b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-18 09:19:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>4a1fea00f5e54ac084c98340835c9040</sys_id>
+        <sys_metadata>19653e142f7bd1100c1058492799b6e8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sys_app_module_19653e142f7bd1100c1058492799b6e8</sys_update_name>
+        <sys_update_version display_value="sys_app_module_19653e142f7bd1100c1058492799b6e8">f62521da2f3f51100c1058492799b6e7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-18 09:19:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

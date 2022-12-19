@@ -941,14 +941,14 @@ tbody tr:last-child {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 10:14:28</sys_created_on>
         <sys_id>d82dba9c2f7bd1100c1058492799b65c</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>HRS Reservations Table</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_d82dba9c2f7bd1100c1058492799b65c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-14 14:16:50</sys_updated_on>
+        <sys_updated_on>2022-12-19 10:51:32</sys_updated_on>
         <template><![CDATA[  <div class="panel panel-{{options.color}} b" ng-class="{'data-table-high-contrast': accessibilityModeEnabled}">
     <div class="panel-heading form-inline" ng-hide="options.hide_header">
       <span class="dropdown m-r-xs">
@@ -961,7 +961,7 @@ tbody tr:last-child {
         </ul>
       </span>
       <h2 class="panel-title" style="display:inline"><i ng-if="options.glyph" class="fa fa-{{options.glyph}} m-r"></i>{{data.title || data.table_plural}}<span class="sr-only">${table} - ${page} {{data.p}}</span></h2>
-      <button name="new" role="button" class="btn btn-primary btn-sm m-l-xs" ng-click="newRecord()" ng-if="options.show_new && data.canCreate && !data.newButtonUnsupported" aria-label="${Create new record}">${New}</button>
+      <button name="new" role="button" class="btn btn-primary btn-sm m-l-xs" ng-click="newRecord()" aria-label="${Create new record}">${New}</button>
       <div class="pull-right" ng-if="options.show_keywords">
 		<form ng-if="data.hasTextIndex" ng-submit="setSearch(true)">
         <div class="input-group" role="presentation">

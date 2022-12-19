@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="HRS Reservations" max_length="40" name="x_881199_hotel_res_hotel_reservations" sizeclass="1" type="collection">
+    <element label="HRS Reservations" max_length="40" name="x_881199_hotel_res_hotel_reservations" sizeclass="2" type="collection">
         <element label="Adults" max_length="40" name="adults" type="integer"/>
         <element label="Check-in" max_length="40" name="check_in" type="calendar_date_time"/>
         <element label="Check-out" max_length="40" name="check_out" type="calendar_date_time"/>
@@ -7,6 +7,7 @@
         <element label="Days" max_length="40" name="days" type="integer"/>
         <element label="Guest Name" max_length="40" name="guest_name" type="string"/>
         <element display="true" label="Room" max_length="40" name="room" reference="x_881199_hotel_res_hrs_rooms" type="string"/>
+        <element attributes="edge_encryption_enabled=true" function_definition="glidefunction:length(sys_created_on)" function_field="true" label="Month" max_length="40" name="rpt_month" read_only="true" type="glide_date"/>
         <element choice="3" label="Status" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_source">
+    <sys_report_source action="INSERT_OR_UPDATE">
+        <description>Gross Sales/Month of Bay Hotel</description>
+        <display>Gross Sales/Month (HRS Reservations)</display>
+        <filter table="x_881199_hotel_res_hotel_reservations">total_paymentISNOTEMPTY^sys_created_on&lt;=javascript:gs.endOfToday()<item endquery="false" field="total_payment" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="&lt;=" or="false" value="javascript:gs.endOfToday()"/>
+        </filter>
+        <name>Gross Sales/Month</name>
+        <sys_class_name>sys_report_source</sys_class_name>
+        <sys_created_by>miguel.b</sys_created_by>
+        <sys_created_on>2022-12-19 10:34:23</sys_created_on>
+        <sys_id>aac347e62f7311100c1058492799b698</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Gross Sales/Month (HRS Reservations)</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sys_report_source_aac347e62f7311100c1058492799b698</sys_update_name>
+        <sys_updated_by>miguel.b</sys_updated_by>
+        <sys_updated_on>2022-12-19 11:15:03</sys_updated_on>
+        <table>x_881199_hotel_res_hotel_reservations</table>
+    </sys_report_source>
+</record_update>

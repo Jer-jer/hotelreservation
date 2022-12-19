@@ -3,35 +3,60 @@
         <category>custom</category>
         <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
         <controller_as>c</controller_as>
-        <css>[type="date"] {&#13;
-  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;&#13;
-}&#13;
-[type="date"]::-webkit-inner-spin-button {&#13;
-  display: none;&#13;
-}&#13;
-[type="date"]::-webkit-calendar-picker-indicator {&#13;
-  opacity: 0;&#13;
-}&#13;
-&#13;
-/* custom styles */&#13;
-body {&#13;
-  padding: 4em;&#13;
-  background: #e5e5e5;&#13;
-  font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;&#13;
-}&#13;
-label {&#13;
-  display: block;&#13;
-}&#13;
-input {&#13;
-  border: 1px solid #c4c4c4;&#13;
-  border-radius: 5px;&#13;
-  background-color: #fff;&#13;
-  padding: 3px 5px;&#13;
-  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);&#13;
-  width: 190px;&#13;
-}&#13;
-label{&#13;
-	color: black;&#13;
+        <css>[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* custom styles */
+/*body {
+  padding: 4em;
+  background: #e5e5e5;
+  font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}*/
+/*label {
+  display: block;
+}*/
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 3px 5px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+  width: 190px;
+}
+h3, label{
+	color: black;
+}
+
+.label_date{
+	padding-right: 63px;
+}
+.label_guest{
+	padding-right: 3px;
+}
+.label_adults{
+	padding-right: 9px;
+}
+.r_type{
+	padding-right: 21px;
+}
+
+.check_in_btn{
+  background-clor: #e7e7e7;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+	cursor: pointer;
+}
+.check_in_btn:hover{
+	background-color: white;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -52,17 +77,30 @@ label{&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 10:00:30</sys_created_on>
         <sys_id>6fe93ad82f7bd1100c1058492799b6f1</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>HRS Check In</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_6fe93ad82f7bd1100c1058492799b6f1</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-12 10:00:44</sys_updated_on>
+        <sys_updated_by>andy.m</sys_updated_by>
+        <sys_updated_on>2022-12-19 12:13:22</sys_updated_on>
         <template><![CDATA[<div>
-	<label for="checkin">Check-in</label><br>
-	<input type="date" name="checkin" id="checkin">
+	<form action="#" method="POST">
+    <h3 for="checkin">Check-in</h3><br>
+    <label class="label_date">Date</label>
+		<input type="date" name="checkin" id="checkin" required><br>
+    <label class="label_guest">Name of Guest</label>
+    <input type="text" name="nameOfGuest" placeholder="Enter name" required><br>
+    <label>No. Of Children</label>
+    <input type="number" name="numOfChild" value="0" min="0"><br>
+    <label class="label_adults">No. of Adults:</label>
+    <input type="number" name="numOfAdults" value="0" min="0"><br>
+    <label class="r_type">Room Type</label>
+    <input type=text name=roomType placeHoler="Room Type" required>    
+    <br>
+    <button class="check_in_btn" type="submit">Check In</button>
+  </form>
 </div>]]></template>
     </sp_widget>
 </record_update>

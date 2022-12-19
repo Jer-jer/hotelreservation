@@ -17,14 +17,14 @@
         <override_menu_roles>true</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_881199_hotel_res.hrs_admin,admin</roles>
+        <roles>admin,x_881199_hotel_res.admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-17 08:40:07</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f75794ce2f3b11100c1058492799b66d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Create New</sys_name>
         <sys_overrides/>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
@@ -32,7 +32,7 @@
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sys_app_module_f75794ce2f3b11100c1058492799b66d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-18 07:19:16</sys_updated_on>
+        <sys_updated_on>2022-12-18 08:58:41</sys_updated_on>
         <timeline_page/>
         <title>Create New</title>
         <uncancelable>false</uncancelable>
