@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <client_script><![CDATA[api.controller=function() {  
+	/* widget controller */  
+	var c = this;
+	
+
+	c.addReservation = function(checkin, checkout, name, child, adult, roomType, canBook){
+		c.data.action="addReservation";
+		if(canBook){
+			c.data.checkin = checkin;
+			c.data.checkout = checkout;
+			c.data.name = name;
+			c.data.numOfChild = child;
+			c.data.numOfAdults = adult;
+			c.data.roomType = roomType;
+			console.log(name);
+			c.server.update().then(function(){
+				c.data.action = "undefined";
+			})
+		}else{
+			alert('You already have an existing reservation!')
+		}
+	}
+};]]></client_script>
         <controller_as>c</controller_as>
         <css>[type="date"] {
   background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
@@ -77,41 +99,83 @@ h3, label{
         <option_schema/>
         <public>true</public>
         <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <script><![CDATA[(function() {  /* populate the 'data' object 
+*/  /* e.g., data.table = $sp.getValue('table'); */
+	if(input){
+		//gs.addInfoMessage(input.name);
+		var gr = new GlideRecord('x_881199_hotel_res_hotel_reservations');
+		var gdtCheckin = new GlideDateTime(input.checkin);
+																			 
+		var gdtCheckout = new GlideDateTime(input.checkout);
+		var days = gdtCheckout.getDayOfMonthLocalTime() - gdtCheckin.getDayOfMonthLocalTime()
+		gr.newRecord();
+		
+		gr.check_in = input.checkin;
+		gr.check_out = input.checkout;
+		gr.guest_name = input.name;
+		gr.children = input.numOfChild;
+		gr.adults = input. numOfAdults;
+		gr.room = input.roomType;
+		gr.days = days;
+		gr.status= "pending";
+		
+		gr.insert();
+		gs.addInfoMessage("Successfully made a reservation.")
+	}
+	
+	var grReservation = new GlideRecord('x_881199_hotel_res_hotel_reservations');
+	grReservation.addQuery('guest_name', gs.getUserDisplayName());
+	grReservation.query();
+	if(grReservation.next()){
+		data.canBook = false;
+	}else{
+		data.canBook = true;
+	}
+	data.userDisplayName = gs.getUserDisplayName();
+	//gs.addInfoMessage(data.canBook);
+
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 10:00:30</sys_created_on>
         <sys_id>6fe93ad82f7bd1100c1058492799b6f1</sys_id>
-        <sys_mod_count>155</sys_mod_count>
+        <sys_mod_count>224</sys_mod_count>
         <sys_name>HRS Check In</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_6fe93ad82f7bd1100c1058492799b6f1</sys_update_name>
-        <sys_updated_by>andy.m</sys_updated_by>
-        <sys_updated_on>2022-12-19 13:11:37</sys_updated_on>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-20 09:33:04</sys_updated_on>
         <template><![CDATA[<div>
 	<form action="#" method="POST">
-    <h3 class="form_title" for="checkin">Check-in</h3><br>
+    <h3 class="form_title" for="Reservation Details">Check-in</h3><br>
    	
     <div class="input_container d-flex flex-row">
       <div>
         <label class="_label" for="checkin">Date</label>
       </div>
       <div>
-        <input class="_input" type="date" 
+        <input ng-model="c.data.checkin" class="_input" type="date" 
                name="checkin" id="checkin" required>
       </div>
     </div>
-    
+    <div class="input_container d-flex flex-row">
+      <div>
+        <label class="_label" for="checkout">Check-out</label>
+      </div>
+      <div>
+        <input ng-model="c.data.checkout" class="_input" type="date" name="checkout" id="checkout">
+      </div> 
+  	</div>
     <div class="input_container d-flex flex-row">
       <div>
         <label class="_label" for="nameOfGuest">Name of Guest</label>
       </div>
       <div>
-        <input class="_input" type="text" name="nameOfGuest"
-               placeholder="Enter name" required>
+        <input ng-model="c.data.name" class="_input" type="text" name="nameOfGuest"
+               placeholder="{{data.userDisplayName}}" required>
       </div>
     </div>
     
@@ -121,7 +185,7 @@ h3, label{
         <p class="label_dsc">Ages 3 to 12</p>
       </div>
       <div>
-        <input class="_input" type="number" 
+        <input ng-model="c.data.numOfChild" class="_input" type="number" 
                name="numOfChild" value="0" min="0">
       </div>
     </div>
@@ -132,7 +196,7 @@ h3, label{
         <p class="label_dsc">Ages 18 up</p>
       </div>
       <div>
-        <input class="_input" type="number"
+        <input ng-model="c.data.numOfAdults" class="_input" type="number"
                name="numOfAdults" value="0" min="0">
       </div>
     </div>
@@ -142,12 +206,12 @@ h3, label{
         <label class="_label" for="roomType">Room Type</label>
       </div>
       <div>
-         <input class="_input" type=text name="roomType"
+         <input ng-model="c.data.roomType" class="_input" type=text name="roomType"
                 placeHoler="Room Type" required>  
       </div>
     </div>
-    
-    <button class="btn btn-primary" type="submit">Check In</button>
+    <input ng-model="c.data.canBook" type="hidden" value="c.data.canBook">
+    <button class="btn btn-primary" ng-click="c.addReservation(c.data.checkin,c.data.checkout,c.data.name,c.data.numOfChild,c.data.numOfAdults,c.data.roomType,c.data.canBook)">Check In</button>
     
   </form>
 </div>]]></template>
