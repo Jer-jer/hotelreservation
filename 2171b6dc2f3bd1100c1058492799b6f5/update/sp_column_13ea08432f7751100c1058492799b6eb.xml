@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
     <sp_column action="INSERT_OR_UPDATE">
-        <class_name>check-in</class_name>
+        <class_name/>
         <order>1</order>
-        <size>4</size>
+        <size>6</size>
         <size_lg/>
         <size_sm/>
         <size_xs/>
-        <sp_row display_value="3">ea0472ea2f3311100c1058492799b66c</sp_row>
+        <sp_row display_value="3">dbea08432f7751100c1058492799b6e8</sp_row>
         <sys_class_name>sp_column</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-12-19 09:21:06</sys_created_on>
-        <sys_id>2604baea2f3311100c1058492799b6b6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_created_by>kashmel.g</sys_created_by>
+        <sys_created_on>2022-12-20 10:19:11</sys_created_on>
+        <sys_id>13ea08432f7751100c1058492799b6eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>1</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
-        <sys_update_name>sp_column_2604baea2f3311100c1058492799b6b6</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-19 09:57:51</sys_updated_on>
+        <sys_update_name>sp_column_13ea08432f7751100c1058492799b6eb</sys_update_name>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-20 10:19:11</sys_updated_on>
     </sp_column>
 </record_update>

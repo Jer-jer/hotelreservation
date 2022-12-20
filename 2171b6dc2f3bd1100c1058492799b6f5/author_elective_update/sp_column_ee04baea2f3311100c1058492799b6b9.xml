@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name>hrs-landing-guests</class_name>
+        <order>2</order>
+        <size>4</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="3">ea0472ea2f3311100c1058492799b66c</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-19 09:21:06</sys_created_on>
+        <sys_id>ee04baea2f3311100c1058492799b6b9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_column_ee04baea2f3311100c1058492799b6b9</sys_update_name>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-20 10:19:03</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sp_column_ee04baea2f3311100c1058492799b6b9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name>hrs-landing-guests</class_name><order>2</order><size>4</size><size_lg/><size_sm/><size_xs/><sp_row display_value="3">ea0472ea2f3311100c1058492799b66c</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-12-19 09:21:06</sys_created_on><sys_id>ee04baea2f3311100c1058492799b6b9</sys_id><sys_mod_count>2</sys_mod_count><sys_name>2</sys_name><sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package><sys_policy/><sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope><sys_update_name>sp_column_ee04baea2f3311100c1058492799b6b9</sys_update_name><sys_updated_by>kashmel.g</sys_updated_by><sys_updated_on>2022-12-20 10:19:03</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-348877537</payload_hash>
+        <record_name>2</record_name>
+        <reverted_from/>
+        <source>1e4ac4032f7751100c1058492799b6f0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>kashmel.g</sys_created_by>
+        <sys_created_on>2022-12-20 10:19:03</sys_created_on>
+        <sys_id>99ea08432f7751100c1058492799b6c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1852f0b3b900000001</sys_recorded_at>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-20 10:19:03</sys_updated_on>
+        <type>Column</type>
+        <update_guid>d1ea084395775110b4e04fcc1eb770c0</update_guid>
+        <update_guid_history>d1ea084395775110b4e04fcc1eb770c0:-348877537,abb98ccf6c375110e99fd73144106c2f:0,5a95c0cb07375110a3c40ce147b53493:1279556066,5595c4cb4a375110b72c8e282d068cf6:-2005446755,f895c4cb0f375110eb46b0e4c6e9d4a8:-348877537,4c522bf6bdb35110dbe2fe6b73258d35:0,c8d1e3b6f3b3511075efe54e1435568b:-1151710374,875bb6a242731110e10be23ba67849cd:1307691681,f42c1726b9f311106597c15b39f4219e:-1151710374,875bb6a242731110e10be23ba67849cd:1307691681,2204baeae2331110da3819da4324adbb:-999241686</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="2">edeac4432f7751100c1058492799b6fe</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>kashmel.g</sys_created_by>
+        <sys_created_on>2022-12-20 10:19:04</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>0cda0c05d25847a08532c35c3c191c40</sys_id>
+        <sys_metadata>ee04baea2f3311100c1058492799b6b9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sp_column_ee04baea2f3311100c1058492799b6b9</sys_update_name>
+        <sys_update_version display_value="sp_column_ee04baea2f3311100c1058492799b6b9">99ea08432f7751100c1058492799b6c0</sys_update_version>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-20 10:19:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
