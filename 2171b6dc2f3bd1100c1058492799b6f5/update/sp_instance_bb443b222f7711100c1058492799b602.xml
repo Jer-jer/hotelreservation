@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">8a51eb2e2ff311100c1058492799b641</sp_column>
+        <sp_widget display_value="HRS Sports List">e9d52b622f3711100c1058492799b64e</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>andy.m</sys_created_by>
+        <sys_created_on>2022-12-19 14:01:54</sys_created_on>
+        <sys_id>bb443b222f7711100c1058492799b602</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_instance_bb443b222f7711100c1058492799b602</sys_update_name>
+        <sys_updated_by>andy.m</sys_updated_by>
+        <sys_updated_on>2022-12-19 14:01:54</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=bb443b222f7711100c1058492799b602"/>
+</record_update>

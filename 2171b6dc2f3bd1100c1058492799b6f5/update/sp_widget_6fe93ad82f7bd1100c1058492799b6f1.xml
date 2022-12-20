@@ -30,33 +30,39 @@ input {
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
   width: 190px;
 }
+//Neil css
+.input_container {
+  width: 340px;
+  padding: 12px 15px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  justify-content: space-between;;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+._label {
+	font-size: 17px;
+	margin: 0;
+  padding: 0;
+}
+
+.label_dsc {
+  color: #979797;
+	font-size: 10px; 
+}
+
+._input {
+	
+  width: 150px;
+}
+
 h3, label{
 	color: black;
 }
 
-.label_date{
-	padding-right: 63px;
-}
-.label_guest{
-	padding-right: 3px;
-}
-.label_adults{
-	padding-right: 9px;
-}
-.r_type{
-	padding-right: 21px;
-}
-
-.check_in_btn{
-  background-clor: #e7e7e7;
-  color: black;
-  padding: 12px;
-  border: none;
-  border-radius: 12px;
-	cursor: pointer;
-}
-.check_in_btn:hover{
-	background-color: white;
+.btn, form_title {
+  margin: 10px 5px;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -77,29 +83,72 @@ h3, label{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 10:00:30</sys_created_on>
         <sys_id>6fe93ad82f7bd1100c1058492799b6f1</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>155</sys_mod_count>
         <sys_name>HRS Check In</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_6fe93ad82f7bd1100c1058492799b6f1</sys_update_name>
         <sys_updated_by>andy.m</sys_updated_by>
-        <sys_updated_on>2022-12-19 12:13:22</sys_updated_on>
+        <sys_updated_on>2022-12-19 13:11:37</sys_updated_on>
         <template><![CDATA[<div>
 	<form action="#" method="POST">
-    <h3 for="checkin">Check-in</h3><br>
-    <label class="label_date">Date</label>
-		<input type="date" name="checkin" id="checkin" required><br>
-    <label class="label_guest">Name of Guest</label>
-    <input type="text" name="nameOfGuest" placeholder="Enter name" required><br>
-    <label>No. Of Children</label>
-    <input type="number" name="numOfChild" value="0" min="0"><br>
-    <label class="label_adults">No. of Adults:</label>
-    <input type="number" name="numOfAdults" value="0" min="0"><br>
-    <label class="r_type">Room Type</label>
-    <input type=text name=roomType placeHoler="Room Type" required>    
-    <br>
-    <button class="check_in_btn" type="submit">Check In</button>
+    <h3 class="form_title" for="checkin">Check-in</h3><br>
+   	
+    <div class="input_container d-flex flex-row">
+      <div>
+        <label class="_label" for="checkin">Date</label>
+      </div>
+      <div>
+        <input class="_input" type="date" 
+               name="checkin" id="checkin" required>
+      </div>
+    </div>
+    
+    <div class="input_container d-flex flex-row">
+      <div>
+        <label class="_label" for="nameOfGuest">Name of Guest</label>
+      </div>
+      <div>
+        <input class="_input" type="text" name="nameOfGuest"
+               placeholder="Enter name" required>
+      </div>
+    </div>
+    
+    <div class="input_container d-flex flex-row">
+      <div>
+        <label class="_label" for="numOfChild">Children</label>
+        <p class="label_dsc">Ages 3 to 12</p>
+      </div>
+      <div>
+        <input class="_input" type="number" 
+               name="numOfChild" value="0" min="0">
+      </div>
+    </div>
+    
+    <div class="input_container d-flex flex-row">
+      <div>
+        <label class="_label" for="numOfAdults">Adults</label>
+        <p class="label_dsc">Ages 18 up</p>
+      </div>
+      <div>
+        <input class="_input" type="number"
+               name="numOfAdults" value="0" min="0">
+      </div>
+    </div>
+    
+    <div class="input_container d-flex flex-row">
+      <div>
+        <label class="_label" for="roomType">Room Type</label>
+      </div>
+      <div>
+         <input class="_input" type=text name="roomType"
+                placeHoler="Room Type" required>  
+      </div>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">Check In</button>
+    
   </form>
 </div>]]></template>
     </sp_widget>
