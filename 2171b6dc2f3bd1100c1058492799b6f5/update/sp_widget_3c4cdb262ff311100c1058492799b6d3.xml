@@ -3,9 +3,31 @@
         <category>custom</category>
         <client_script><![CDATA[api.controller=function() {
   /* widget controller */
+	var c = this;
+	
+	c.cancelReservation = function(sysid){
+		c.data.action="cancelReservation";
+		c.data.sysid=sysid;
+		c.server.update().then(function(){
+			c.data.action = "undefined";
+		})
+	}
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>h1{
+  margin: 0;
+}
+//Kash CSS
+.panel{
+	box-shadow: 5px 8px 4px rgba(0, 0, 0, 0.25);
+}
+.panel-title{
+	background-color: #3751FF;
+  max-height: 100%;
+  max-width: 100%;
+  color: white;
+  padding: 5%
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -20,21 +42,47 @@
         <public>true</public>
         <roles/>
         <script><![CDATA[(function() {
-  /* populate the 'data' object */
+	/* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
-	var grreservation = new GlideRecord('x_881199_hotel_res_hotel_reservations'); 
 	
-	grreservation.addQuery('guest_name', 'Allan Jericho');
+	
+	if(input){
+		var gr = new GlideRecord('x_881199_hotel_res_hotel_reservations');
+		gr.addQuery('sys_id', input.sysid);
+		gr.query();
+
+		if (gr.next()) {
+			gr.deleteRecord();
+		}
+	}
+		
+	
+	
+	var grreservation = new GlideRecord('x_881199_hotel_res_hotel_reservations'); 
+	grreservation.addQuery('guest_name', gs.getUserDisplayName());
 	grreservation.orderByDesc('sys_created_on');
 	grreservation.setLimit(1);
 	grreservation.query();
 	
 	while(grreservation.next()){
-
+		
+		var dateTimeNow = new GlideDateTime();
+		var gdtCheckinDate = new GlideDateTime(grreservation.getValue(('check_in')));
+		var gdtCheckoutDate = new GlideDateTime(grreservation.getValue(('check_out')));
+		
 		data.guestname = grreservation.getValue('guest_name');
-		data.checkin = grreservation.getValue('check_in');
-		data.checkout = grreservation.getValue('check_out');
+		data.checkin = gdtCheckinDate.getDate().getValue();
+		data.checkout = gdtCheckoutDate.getDate().getValue();
 		data.days = grreservation.getValue('days');
+		data.sysid = grreservation.getValue('sys_id');
+		//var daysDiff = gdtCheckinDate.add(-dateTimeNow);
+		var diff = gdtCheckinDate.getDayOfMonthLocalTime() - dateTimeNow.getDayOfMonthLocalTime();
+		
+		if(diff<=3 && diff>=0){
+			data.cancellable=false;
+		}else{
+			data.cancellable=true;
+		}
 	}
 })();]]></script>
         <servicenow>false</servicenow>
@@ -42,27 +90,35 @@
         <sys_created_by>kashmel.g</sys_created_by>
         <sys_created_on>2022-12-19 12:16:49</sys_created_on>
         <sys_id>3c4cdb262ff311100c1058492799b6d3</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>149</sys_mod_count>
         <sys_name>HRS User Reservation</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_3c4cdb262ff311100c1058492799b6d3</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-19 15:04:54</sys_updated_on>
-        <template><![CDATA[<div>
-  <h1>
-    Hello! {{data.guestname}}
-  </h1>
-  <h1>
-    {{data.checkout}}
-  </h1>
-  <h1>
-    {{data.checkin}}
-  </h1>
-  <h1>
-    {{data.days}}
-  </h1>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-20 05:06:57</sys_updated_on>
+        <template><![CDATA[
+<div class="panel panel-primary">
+	<div class="panel-title">
+    <h1>
+    	Hello, {{data.guestname}}. Your current reservation:
+  	</h1>
+  </div>
+  <div class="panel-body">
+    <h2>
+    	Checkin: {{data.checkin}}
+  	</h2>
+  	<h2>
+    	Checkout: {{data.checkout}}
+  	</h2>
+  	<h2>
+    	Days: {{data.days}}
+  	</h2>
+    <button class="btn btn-warning" ng-if="data.cancellable" ng-click="c.cancelReservation(data.sysid)">
+    	Cancel Reservation
+    </button>
+  </div>
 </div>]]></template>
     </sp_widget>
 </record_update>
