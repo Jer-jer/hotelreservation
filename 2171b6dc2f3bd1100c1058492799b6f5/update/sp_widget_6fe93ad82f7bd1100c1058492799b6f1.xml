@@ -4,10 +4,33 @@
         <client_script><![CDATA[api.controller=function() {  
 	/* widget controller */  
 	var c = this;
+	var price;
 	
-
-	c.addReservation = function(checkin, checkout, name, child, adult, roomType, canBook){
+	//function dropdownChanged(single, double, triple, quad, queen, king, executive, presidential){
+		//console.log("hello");
+		
+		//if(document.querySelector("#roomTypeDropdown").value == "single")
+			//document.getElementById("total-price").value = single;
+	  //else if(document.querySelector("#roomTypeDropdown").value == "double")
+			//document.getElementById("total-price").value = double;
+		//else if(document.querySelector("#roomTypeDropdown").value == "triple")
+			//document.getElementById("total-price").value = triple;
+		//else if(document.querySelector("#roomTypeDropdown").value == "quad")
+			//document.getElementById("total-price").value = quad;
+		//else if(document.querySelector("#roomTypeDropdown").value == "queen")
+			//document.getElementById("total-price").value = queen;
+		//else if(document.querySelector("#roomTypeDropdown").value == "king")
+			//document.getElementById("total-price").value = king;
+		//else if(document.querySelector("#roomTypeDropdown").value == "executive")
+			//document.getElementById("total-price").value = executive;
+		//else
+			//document.getElementById("total-price").value = presidential;
+	//}
+	
+	c.addReservation = function(checkin, checkout, name, child, adult, roomType, canBook, totalPayment){
+		
 		c.data.action="addReservation";
+		//var isConfirm = confirm("Your total payment will be: " + totalPayment);
 		if(canBook){
 			c.data.checkin = checkin;
 			c.data.checkout = checkout;
@@ -15,14 +38,14 @@
 			c.data.numOfChild = child;
 			c.data.numOfAdults = adult;
 			c.data.roomType = roomType;
-			console.log(name);
+			console.log(c.data.roomType);
 			c.server.update().then(function(){
 				c.data.action = "undefined";
-			})
+			});
 		}else{
-			alert('You already have an existing reservation!')
+			alert('You already have an existing reservation!');
 		}
-	}
+	};
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>[type="date"] {
@@ -75,17 +98,104 @@ input {
 }
 
 ._input {
-	
-  width: 150px;
+	padding: 10px 0 10px 15px;
+  width: 215px;
 }
 
-h3, label{
-	color: black;
+h2, label{
+	color: #363740;
 }
 
-.btn, form_title {
+form_title {
   margin: 10px 5px;
-}</css>
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  margin-left: 24.5rem;
+  border: 2px solid #363740;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-6 {
+  background: #363740;
+  color: #fff;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 2px;
+  background: #000;
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-6:hover{
+  color: #000;
+  background: transparent;
+}
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  background: #000;
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease;
+}
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+}
+.btn-6 span:hover:after {
+  width: 100%;
+}
+
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -102,12 +212,27 @@ h3, label{
         <script><![CDATA[(function() {  /* populate the 'data' object 
 */  /* e.g., data.table = $sp.getValue('table'); */
 	if(input){
-		//gs.addInfoMessage(input.name);
 		var gr = new GlideRecord('x_881199_hotel_res_hotel_reservations');
-		var gdtCheckin = new GlideDateTime(input.checkin);
-																			 
+		//get a single room with == room_type chosen
+		var grRooms = new GlideRecord('x_881199_hotel_res_hrs_rooms');
+		grRooms.addQuery('room_type', input.roomType);
+		grRooms.setLimit(1);
+		grRooms.query();
+		
+		
+		var roomID, price;
+		while(grRooms.next()){
+			roomID = grRooms.getValue('sys_id');
+			price = grRooms.getValue('room_rate')
+			grRooms.setValue('availability','unavailable');
+			grRooms.update();
+		}
+		
+		var gdtCheckin = new GlideDateTime(input.checkin);																	 
 		var gdtCheckout = new GlideDateTime(input.checkout);
-		var days = gdtCheckout.getDayOfMonthLocalTime() - gdtCheckin.getDayOfMonthLocalTime()
+		var days = gdtCheckout.getDayOfMonthLocalTime() - gdtCheckin.getDayOfMonthLocalTime();
+		var totalCost = days * price;
+		
 		gr.newRecord();
 		
 		gr.check_in = input.checkin;
@@ -115,15 +240,66 @@ h3, label{
 		gr.guest_name = input.name;
 		gr.children = input.numOfChild;
 		gr.adults = input. numOfAdults;
-		gr.room = input.roomType;
+		gr.room = roomID;
+		gr.total_payment = totalCost;
 		gr.days = days;
 		gr.status= "pending";
 		
 		gr.insert();
-		gs.addInfoMessage("Successfully made a reservation.")
+		gs.addInfoMessage("Successfully made a reservation.");
 	}
-	
 	var grReservation = new GlideRecord('x_881199_hotel_res_hotel_reservations');
+	var grAvailableRooms = new GlideAggregate('x_881199_hotel_res_hrs_rooms');
+	grAvailableRooms.addQuery('availability', 'available');
+	grAvailableRooms.addAggregate('count', 'room_type');
+	//grAvailableRooms.orderByAggregate('COUNT','room_type');
+	grAvailableRooms.query();
+	
+	
+	data.hasSingle = false;
+	data.hasDouble = false;
+	data.hasTriple = false;
+	data.hasQuad = false;
+	data.hasQueen = false;
+	data.hasKing = false;
+	data.hasExecutive = false;
+	data.hasPresidential = false;
+	while(grAvailableRooms.next()){
+		switch(grAvailableRooms.getValue('room_type')){
+			case 'single':
+				data.hasSingle=true;
+				data.singlePrice=grAvailableRooms.getValue('room_rate');
+				break;
+			case 'double':
+				data.hasDouble=true;
+				data.doublePrice=grAvailableRooms.getValue('room_rate');
+				break;
+			case 'triple':
+				data.hasTriple=true;
+				data.triplePrice=grAvailableRooms.getValue('room_rate');
+				break;
+			case 'quad':
+				data.hasQuad=true;
+				data.quadPrice=grAvailableRooms.getValue('room_rate');
+				break;
+			case 'queen':
+				data.hasQueen=true;
+				data.queenPrice=grAvailableRooms.getValue('room_rate');
+				break;
+			case 'king':
+				data.hasKing=true;
+				data.kingPrice=grAvailableRooms.getValue('room_rate');
+				break;
+			case 'executive':
+				data.hasExecutive=true;
+				data.executivePrice=grAvailableRooms.getValue('room_rate');
+				break;
+			case 'presidential':
+				data.hasPresidential=true;
+				data.presidentialPrice=grAvailableRooms.getValue('room_rate');
+				break;
+		}
+	}
 	grReservation.addQuery('guest_name', gs.getUserDisplayName());
 	grReservation.query();
 	if(grReservation.next()){
@@ -132,7 +308,6 @@ h3, label{
 		data.canBook = true;
 	}
 	data.userDisplayName = gs.getUserDisplayName();
-	//gs.addInfoMessage(data.canBook);
 
 })();]]></script>
         <servicenow>false</servicenow>
@@ -140,17 +315,17 @@ h3, label{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 10:00:30</sys_created_on>
         <sys_id>6fe93ad82f7bd1100c1058492799b6f1</sys_id>
-        <sys_mod_count>224</sys_mod_count>
+        <sys_mod_count>371</sys_mod_count>
         <sys_name>HRS Check In</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_6fe93ad82f7bd1100c1058492799b6f1</sys_update_name>
         <sys_updated_by>kashmel.g</sys_updated_by>
-        <sys_updated_on>2022-12-20 09:33:04</sys_updated_on>
+        <sys_updated_on>2022-12-21 01:36:33</sys_updated_on>
         <template><![CDATA[<div>
 	<form action="#" method="POST">
-    <h3 class="form_title" for="Reservation Details">Check-in</h3><br>
+    <h2 class="form_title" for="Reservation Details">Check-in</h2><br>
    	
     <div class="input_container d-flex flex-row">
       <div>
@@ -206,12 +381,24 @@ h3, label{
         <label class="_label" for="roomType">Room Type</label>
       </div>
       <div>
-         <input ng-model="c.data.roomType" class="_input" type=text name="roomType"
-                placeHoler="Room Type" required>  
+         <select id= "roomTypeDropdown" ng-model="c.data.roomType" class="_input">
+          <option ng-if="data.hasSingle" value="single">Single</option>
+          <option ng-if="data.hasDouble" value="double">Double</option>
+          <option ng-if="data.hasTriple" value="triple">Triple</option>
+          <option ng-if="data.hasQuad" value="quad">Quad</option>
+          <option ng-if="data.hasQueen" value="queen">Queen</option>
+          <option ng-if="data.hasKing" value="king">King</option>
+          <option ng-if="data.hasExecutive" value="executive">Executive Suite</option>
+          <option ng-if="data.hasPresidential" value="presidential">Presidential Suite</option>
+        </select>  
       </div>
     </div>
-    <input ng-model="c.data.canBook" type="hidden" value="c.data.canBook">
-    <button class="btn btn-primary" ng-click="c.addReservation(c.data.checkin,c.data.checkout,c.data.name,c.data.numOfChild,c.data.numOfAdults,c.data.roomType,c.data.canBook)">Check In</button>
+    
+    <button type="button" class="custom-btn btn-6" ng-click="c.addReservation(c.data.checkin,c.data.checkout,c.data.name,c.data.numOfChild,c.data.numOfAdults,c.data.roomType,c.data.canBook)">
+      <span>
+     		Check In
+      </span>
+    </button>
     
   </form>
 </div>]]></template>

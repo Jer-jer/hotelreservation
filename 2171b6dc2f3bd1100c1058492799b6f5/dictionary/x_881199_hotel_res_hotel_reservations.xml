@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="HRS Reservations" max_length="40" name="x_881199_hotel_res_hotel_reservations" sizeclass="2" type="collection">
+    <element label="HRS Reservations" max_length="40" name="x_881199_hotel_res_hotel_reservations" sizeclass="5" type="collection">
         <element label="Adults" max_length="40" name="adults" type="integer"/>
         <element label="Check-in" max_length="40" name="check_in" type="calendar_date_time"/>
         <element label="Check-out" max_length="40" name="check_out" type="calendar_date_time"/>
         <element label="Children" max_length="40" name="children" type="integer"/>
         <element label="Days" max_length="40" name="days" type="integer"/>
         <element label="Guest Name" max_length="40" name="guest_name" type="string"/>
-        <element display="true" label="Room" max_length="40" name="room" reference="x_881199_hotel_res_hrs_rooms" type="string"/>
+        <element choice="3" display="true" label="Room" max_length="40" name="room" reference="x_881199_hotel_res_hrs_rooms" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Ocean View" value="Ocean View"/>
+                <element inactive_on_update="false" label="Simple" value="Simple"/>
+                <element inactive_on_update="false" label="Single" value="Single"/>
+            </choice>
+        </element>
         <element attributes="edge_encryption_enabled=true" function_definition="glidefunction:length(sys_created_on)" function_field="true" label="Month" max_length="40" name="rpt_month" read_only="true" type="glide_date"/>
         <element choice="3" label="Status" max_length="40" name="status" type="choice">
             <choice>
@@ -19,6 +25,7 @@
         </element>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element label="Total Payment" max_length="38" name="total_payment" type="price"/>
+        <element label="User" max_length="40" name="user" type="string"/>
         <index name="index">
             <element name="sys_class_name"/>
         </index>

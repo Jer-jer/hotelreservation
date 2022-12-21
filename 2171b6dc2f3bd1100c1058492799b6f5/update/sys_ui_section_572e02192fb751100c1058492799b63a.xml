@@ -196,6 +196,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user</element>
+            <position>14</position>
+            <sys_created_by>kashmel.g</sys_created_by>
+            <sys_created_on>2022-12-20 14:02:22</sys_created_on>
+            <sys_id>ac0e34072f3b51100c1058492799b625</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_881199_hotel_res_hotel_reservations" sys_domain="global" view="Default view">572e02192fb751100c1058492799b63a</sys_ui_section>
+            <sys_updated_by>kashmel.g</sys_updated_by>
+            <sys_updated_on>2022-12-20 14:02:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

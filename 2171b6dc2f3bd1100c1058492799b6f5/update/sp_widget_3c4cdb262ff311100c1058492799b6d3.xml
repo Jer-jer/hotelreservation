@@ -22,11 +22,95 @@
 	box-shadow: 5px 8px 4px rgba(0, 0, 0, 0.25);
 }
 .panel-title{
-	background-color: #3751FF;
+	background-color: #363740;
   max-height: 100%;
   max-width: 100%;
   color: white;
   padding: 5%
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  padding: 4px 15px
+  border: 2px solid #363740;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.btn-6 {
+  background: #363740;
+  color: #fff;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 2px;
+  background: #000;
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-6:hover{
+  color: #000;
+  background: transparent;
+}
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  background: #000;
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease;
+}
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+}
+.btn-6 span:hover:after {
+  width: 100%;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -47,6 +131,7 @@
 	
 	
 	if(input){
+		gs.addInfoMessage("You have cancelled your reservation.");
 		var gr = new GlideRecord('x_881199_hotel_res_hotel_reservations');
 		gr.addQuery('sys_id', input.sysid);
 		gr.query();
@@ -91,16 +176,15 @@
         <sys_created_by>kashmel.g</sys_created_by>
         <sys_created_on>2022-12-19 12:16:49</sys_created_on>
         <sys_id>3c4cdb262ff311100c1058492799b6d3</sys_id>
-        <sys_mod_count>159</sys_mod_count>
+        <sys_mod_count>169</sys_mod_count>
         <sys_name>HRS User Reservation</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_3c4cdb262ff311100c1058492799b6d3</sys_update_name>
-        <sys_updated_by>kashmel.g</sys_updated_by>
-        <sys_updated_on>2022-12-20 09:30:42</sys_updated_on>
-        <template><![CDATA[
-<div class="panel panel-primary" ng-if="data.hasRecord">
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-20 13:49:17</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-primary" ng-if="data.hasRecord">
 	<div class="panel-title">
     <h1>
     	Hello, {{data.guestname}}. Your current reservation:
@@ -116,8 +200,10 @@
   	<h2>
     	Days: {{data.days}}
   	</h2>
-    <button class="btn btn-warning" ng-if="data.cancellable" ng-click="c.cancelReservation(data.sysid)">
-    	Cancel Reservation
+    <button class="custom-btn btn-6" ng-if="data.cancellable" ng-click="c.cancelReservation(data.sysid)">
+    	<span>
+    		Cancel
+      	</span>
     </button>
   </div>
 </div>]]></template>

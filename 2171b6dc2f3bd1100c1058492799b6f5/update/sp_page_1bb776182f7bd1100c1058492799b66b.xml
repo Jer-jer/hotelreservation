@@ -4,10 +4,11 @@
         <css>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap');&#13;
 &#13;
 main.body[data-page-title="HRS Landing Page"] {&#13;
-	background-image: url("https://pix10.agoda.net/hotelImages/6532356/-1/8735241712040cf6b22c01cc035dc185.jpg?ca=8&amp;ce=1&amp;s=1024x768")!important;&#13;
-	background-size: cover;	&#13;
+	background-image: &#13;
+      linear-gradient(rgba(247, 248, 252, 0.73), rgba(247, 248, 252, 0.73)),&#13;
+      url("https://pix10.agoda.net/hotelImages/6532356/-1/8735241712040cf6b22c01cc035dc185.jpg?ca=8&amp;ce=1&amp;s=1024x768")!important;&#13;
+  	background-size: cover!important;	&#13;
   	background-repeat: no-repeat;&#13;
-  	height: 100vh;&#13;
   	overflow: hidden;&#13;
 }&#13;
 &#13;
@@ -29,6 +30,16 @@ main.body[data-page-title="HRS Landing Page"] {&#13;
   	padding-bottom: 28px;&#13;
   	padding-left: 101px;&#13;
   	padding-right: 101px;&#13;
+}&#13;
+&#13;
+.hrs-landing-form-container {&#13;
+  margin-bottom: 28px;&#13;
+}&#13;
+&#13;
+.hrs-landing-forms {&#13;
+	display: flex;&#13;
+  	justify-content: center;&#13;
+  	align-items: center;&#13;
 }</css>
         <draft>false</draft>
         <dynamic_title_structure/>
@@ -43,14 +54,14 @@ main.body[data-page-title="HRS Landing Page"] {&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 09:50:55</sys_created_on>
         <sys_id>1bb776182f7bd1100c1058492799b66b</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>hrs_landing_page</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_page_1bb776182f7bd1100c1058492799b66b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-19 09:42:33</sys_updated_on>
+        <sys_updated_on>2022-12-20 11:06:05</sys_updated_on>
         <title>HRS Landing Page</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>

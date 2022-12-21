@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="room" table="x_881199_hotel_res_hotel_reservations" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>room</element>
+            <name>x_881199_hotel_res_hotel_reservations</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-20 13:58:03</sys_created_on>
+            <sys_id>550db0c32f3b51100c1058492799b6bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>room</sys_name>
+            <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+            <sys_update_name>sys_choice_x_881199_hotel_res_hotel_reservations_room</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-20 13:58:03</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ocean View</label>
+            <language>en</language>
+            <name>x_881199_hotel_res_hotel_reservations</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-20 13:58:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dd0db0c32f3b51100c1058492799b6bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-20 13:58:03</sys_updated_on>
+            <value>Ocean View</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Simple</label>
+            <language>en</language>
+            <name>x_881199_hotel_res_hotel_reservations</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-20 13:58:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5d0db0c32f3b51100c1058492799b6bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-20 13:58:03</sys_updated_on>
+            <value>Simple</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>room</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Single</label>
+            <language>en</language>
+            <name>x_881199_hotel_res_hotel_reservations</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-12-20 13:58:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1d0db0c32f3b51100c1058492799b6be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-12-20 13:58:03</sys_updated_on>
+            <value>Single</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>
