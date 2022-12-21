@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>HRS Sports - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="hrs_sports">4731632e2ff311100c1058492799b678</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>andy.m</sys_created_by>
+        <sys_created_on>2022-12-19 12:56:09</sys_created_on>
+        <sys_id>bc45af222f3711100c1058492799b645</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Sports - Container 2</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_container_bc45af222f3711100c1058492799b645</sys_update_name>
+        <sys_updated_by>andy.m</sys_updated_by>
+        <sys_updated_on>2022-12-19 12:56:09</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sp_container_bc45af222f3711100c1058492799b645</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>HRS Sports - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="hrs_sports">4731632e2ff311100c1058492799b678</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>andy.m</sys_created_by>
+        <sys_created_on>2022-12-19 12:56:09</sys_created_on>
+        <sys_id>bc45af222f3711100c1058492799b645</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Sports - Container 2</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_container_bc45af222f3711100c1058492799b645</sys_update_name>
+        <sys_updated_by>andy.m</sys_updated_by>
+        <sys_updated_on>2022-12-19 12:56:09</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>]]></payload>
+        <payload_hash>-83313600</payload_hash>
+        <record_name>HRS Sports - Container 2</record_name>
+        <reverted_from/>
+        <source>df32a3f62fb351100c1058492799b6e3</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>kashmel.g</sys_created_by>
+        <sys_created_on>2022-12-20 07:21:45</sys_created_on>
+        <sys_id>4c522bf62fb351100c1058492799b63f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1852e68e8de0000001</sys_recorded_at>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-20 07:21:45</sys_updated_on>
+        <type>Container</type>
+        <update_guid>88522bf685b351105ec5c30229031b3f</update_guid>
+        <update_guid_history>88522bf685b351105ec5c30229031b3f:0,ce41a77662b35110861a81e14b38cc88:812022745,f15bdbfe7773511097a8253cef82dcb7:0,4ba407fa253351109631d085728da898:812022745,f445af22883711101d68f3e4f267b647:315508154,0a2d08f6d2b71110cc8269e53059e5aa:812022745,f445af22883711101d68f3e4f267b647:315508154</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HRS Sports - Container 2">70ca10d72f7791100c1058492799b65c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-21 06:06:52</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>0db9e5c48e9e4b36917349a587025ea4</sys_id>
+        <sys_metadata>bc45af222f3711100c1058492799b645</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Sports - Container 2</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sp_container_bc45af222f3711100c1058492799b645</sys_update_name>
+        <sys_update_version display_value="sp_container_bc45af222f3711100c1058492799b645">4c522bf62fb351100c1058492799b63f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 06:06:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

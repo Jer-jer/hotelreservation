@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="HRS Accounts">49faed122f7f51100c1058492799b69c</application>
+        <filter/>
+        <name>HRS Accounts</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_881199_hotel_res.admin</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-18 09:23:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c9fae1522f7f51100c1058492799b69a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Accounts</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sys_ui_module_c9fae1522f7f51100c1058492799b69a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-18 09:23:18</sys_updated_on>
+        <table>x_881199_hotel_res_hrs_accounts</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sys_ui_module_c9fae1522f7f51100c1058492799b69a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="HRS Accounts">49faed122f7f51100c1058492799b69c</application>
+        <filter/>
+        <name>HRS Accounts</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_881199_hotel_res.admin</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-18 09:23:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c9fae1522f7f51100c1058492799b69a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Accounts</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sys_ui_module_c9fae1522f7f51100c1058492799b69a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-18 09:23:18</sys_updated_on>
+        <table>x_881199_hotel_res_hrs_accounts</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>]]></payload>
+        <payload_hash>-206291573</payload_hash>
+        <record_name>HRS Accounts</record_name>
+        <reverted_from/>
+        <source>df32a3f62fb351100c1058492799b6e3</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>kashmel.g</sys_created_by>
+        <sys_created_on>2022-12-20 07:21:55</sys_created_on>
+        <sys_id>2652abf62fb351100c1058492799b6b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1852e690eb00000001</sys_recorded_at>
+        <sys_updated_by>kashmel.g</sys_updated_by>
+        <sys_updated_on>2022-12-20 07:21:55</sys_updated_on>
+        <type>Module</type>
+        <update_guid>6252abf694b35110295c13a5b76928b2</update_guid>
+        <update_guid_history>6252abf694b35110295c13a5b76928b2:0,37c1e3b60bb351100a9460c899a4b724:713413221,f6c163b67ab3511033c10c5e868ea7e5:0,d1fae152dc7f5110860290a7c22e8d9c:246801889,e02c172645f3111052c1534daf7cae40:713413221,c31c93260cf31110057dee0882b82340:0,d1fae152dc7f5110860290a7c22e8d9c:246801889</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-21 04:54:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>2bde3209cc2d40258c5683647d491e11</sys_id>
+        <sys_metadata>c9fae1522f7f51100c1058492799b69a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Accounts</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sys_ui_module_c9fae1522f7f51100c1058492799b69a</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_c9fae1522f7f51100c1058492799b69a">2652abf62fb351100c1058492799b6b2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 04:54:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

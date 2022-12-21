@@ -170,7 +170,7 @@ nav {&#13;
     justify-content: center;&#13;
     align-items: center;&#13;
     width: 100%;&#13;
-    flex-shrink: 1.9;&#13;
+    flex-shrink: 1.5;&#13;
     &#13;
     .navbar-brand-link {&#13;
     	flex: 1;&#13;
@@ -441,14 +441,14 @@ data.loginWidget = $sp.getWidgetFromInstance('hrs_header_new');]]></script>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-12 10:18:36</sys_created_on>
         <sys_id>701e3adc2f7bd1100c1058492799b6fd</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>HRS Stock Header</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_header_footer_701e3adc2f7bd1100c1058492799b6fd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-20 17:57:38</sys_updated_on>
+        <sys_updated_on>2022-12-21 05:33:48</sys_updated_on>
         <template><![CDATA[<div>
   <nav class="navbar-inverse" ng-class="::{'navbar':!isViewNative, 'is-native': isViewNative}"
        role="navigation" aria-label="${Primary}">

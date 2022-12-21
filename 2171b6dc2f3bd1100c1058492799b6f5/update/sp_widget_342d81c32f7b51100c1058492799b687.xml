@@ -528,14 +528,14 @@ button.cert, a.idp {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-20 15:08:28</sys_created_on>
         <sys_id>342d81c32f7b51100c1058492799b687</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>HRS Login New</sys_name>
         <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
         <sys_policy/>
         <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
         <sys_update_name>sp_widget_342d81c32f7b51100c1058492799b687</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-12-20 18:51:19</sys_updated_on>
+        <sys_updated_on>2022-12-21 05:22:23</sys_updated_on>
         <template><![CDATA[<div ng-if="!data.is_logged_in" class="sp-login-widget" ng-class="::(c.options.use_advanced == 'true' ? 'advanced' : '')">
   <div class="main">
     <form ng-if="!c.externalLoginMode" class="form-signin" ng-submit="c.login(c.username, c.password)" method="post">
@@ -633,7 +633,7 @@ button.cert, a.idp {
       </div>
     </form>
     <div class="sp-self-registration forgot-pwd-link">${Don't have an account?}
-      <a ng-href="/{{::c.data.url_suffix}}?id=sn_user_registration&sys_id={{::c.data.self_registration_record_producer}}">{{::c.data.self_registration_label}}</a>
+      <a ng-href="https://dev143370.service-now.com/user_registration_request.do?sys_id=-1&sys_is_list=true&sys_target=user_registration_request&sysparm_checked_items=&sysparm_fixed_query=&sysparm_group_sort=&sysparm_list_css=&sysparm_query=state%3dpending&sysparm_referring_url=user_registration_request_list.do%3fsysparm_query%3dstate%253Dpending%255EEQ&sysparm_target=&sysparm_view=">Sign Up</a>
     </div>
   </div>
   

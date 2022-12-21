@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-heading {
+  padding-left: 8px;
+  border-color: transparent;
+}
+
+thead {
+  border-bottom: 1px solid #ddd;
+}
+
+table {
+  margin-bottom: 0;
+}
+
+.table &gt; thead &gt; tr &gt; th {
+  border: 1px solid transparent;
+  cursor: pointer;
+  vertical-align: middle;
+
+  &amp;:nth-child(2) {
+    border-left: none;
+  }
+
+
+
+  &amp;:last-child {
+    border-right: none;
+  }
+}
+
+th i {
+  display: inline-block;
+  margin-left: 5px;
+  color: #A0A0A0;
+}
+
+div.data-table-high-contrast th i {
+ color: #363740; 
+}
+
+th .disabled{
+  color:#ddd;
+}
+
+.th-title {
+  display: inline-block;
+  color: #bdbdbd;
+}
+
+.sp-list-cell {
+  padding: 1.5rem;
+  width: 100px;
+  white-space: pre-wrap;
+}
+
+td span {
+  color: #363740;
+}
+
+.panel-body {
+  overflow: auto;
+  padding: 0px;
+}
+
+
+.selected {
+  color: #fff;
+  background-color: $data-table-selected;
+  border-color: 1px solid #fff;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+.pruned-msg {
+  padding-bottom: 10px;
+  padding-left: 4px;
+  text-align: center;
+}
+
+.pruned-msg-filter-pad {
+  padding-top:8px;
+}
+
+.filter-breadcrumbs {
+  padding-top: 3px;
+}
+
+.filter-breadcrumbs ~ .table {
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-toggle {
+  background: none;
+  padding: 0 0 4px 0;
+}
+
+.btn-group a {
+  background-color: #f5f5f5!important;
+  border-color: transparent!important;
+}</css>
+        <data_table>sp_instance_table</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>table,filter,field_list,maximum_entries,order,order_by,order_direction,title,color,glyph,sp_page</field_list>
+        <has_preview>true</has_preview>
+        <id>hrs_sports_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>HRS Sports List</name>
+        <option_schema>[{"hint":"If enabled, show the list filter in the breadcrumbs of the data table","name":"enable_filter","default_value":"false","section":"Behavior","label":"Enable Filter","type":"boolean"}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>andy.m</sys_created_by>
+        <sys_created_on>2022-12-19 12:58:39</sys_created_on>
+        <sys_id>e9d52b622f3711100c1058492799b64e</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>HRS Sports List</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_widget_e9d52b622f3711100c1058492799b64e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:57:46</sys_updated_on>
+        <template><![CDATA[  <div class="panel panel-{{options.color}} b" ng-class="{'data-table-high-contrast': accessibilityModeEnabled}">
+    <div class="panel-heading form-inline" ng-hide="options.hide_header">
+      <span class="dropdown m-r-xs">
+        <button aria-label="{{data.title || data.table_plural}} ${Context Menu}" class="btn dropdown-toggle glyphicon glyphicon-menu-hamburger" style="line-height: 1.4em" id="optionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <ul class="dropdown-menu" aria-labelledby="optionsMenu">
+          <li ng-repeat="t in ::exportTypes">
+            <a ng-if="!tinyUrlEnabled" ng-href="/{{data.table}}_list.do?{{::t.value}}&sysparm_query={{data.exportQueryEncoded}}&sysparm_view={{data.view}}&sysparm_fields={{data.fields}}" target="_new" tabindex="-1">${Export as} {{::t.label}}</a>
+            <a ng-if="tinyUrlEnabled" ng-href="/{{data.table}}_list.do?{{::t.value}}&sysparm_tiny={{tinyUrl}}" target="_new" tabindex="-1">${Export as} {{::t.label}}</a>
+          </li>
+        </ul>
+      </span>
+      <h2 class="panel-title" style="display:inline"><i ng-if="options.glyph" class="fa fa-{{options.glyph}} m-r"></i>{{data.title || data.table_plural}}<span class="sr-only">${table} - ${page} {{data.p}}</span></h2>
+      <button name="new" role="button" class="btn btn-primary btn-sm m-l-xs" ng-click="newRecord()" aria-label="${Create new record}">${Book}</button>
+      <div class="pull-right" ng-if="options.show_keywords">
+		<form ng-if="data.hasTextIndex" ng-submit="setSearch(true)">
+        <div class="input-group" role="presentation">
+          <input type="text" name="datatable-search" ng-model="data.keywords" ng-model-options="{debounce:250}" class="form-control" placeholder="${Keyword Search}" aria-label="${Keyword Search}">
+          <span class="input-group-btn">
+            <button name="search" class="btn btn-default" type="submit" aria-label="${Search}"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div>
+        </form>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- body -->
+    <div class="panel-body">
+      <div ng-if="options.show_breadcrumbs && (data.filter || data.enable_filter)" class="filter-breadcrumbs">
+	    		<sp-widget widget="data.filterBreadcrumbs"></sp-widget>
+      </div>
+      <div class="clearfix"></div>
+      <div class="alert alert-info" ng-if="!data.list.length && !data.num_pages && !data.invalid_table && !loadingData">
+        ${No records in {{data.table_label}} <span ng-if="data.filter">using that filter</span>}
+      </div>
+      <div class="alert alert-info" ng-if="loadingData">
+          <fa name="spinner" spin="true"></fa> ${Loading data}...
+       </div>
+      <table class="table table-striped table-responsive" ng-if="data.list.length">
+        <caption class="sr-only">{{data.title || data.table_plural}}</caption>
+        <thead>
+          <tr>
+            <th ng-repeat="field in data.fields_array track by $index" class="text-nowrap" ng-click="setOrderBy(field)"
+             scope="col" role="columnheader" aria-sort="{{field == data.o ? (data.d == 'asc'? 'ascending': 'descending') : 'none'}}">
+              <div class="th-title" title="${Sort by} {{field == data.o ? (data.d == 'asc' ?  '${Descending}': '${Ascending}') : '${Ascending}'}}" role="button" tabindex="0" aria-label="{{data.column_labels[field]}}">{{data.column_labels[field]}}</div>
+              <i class="fa" ng-if="field == data.o" ng-class="{'asc': 'fa-chevron-up', 'desc': 'fa-chevron-down'}[data.d]"></i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in data.list track by item.sys_id">
+            <td role="{{$first ? 'rowheader' : 'cell'}}" class="pointer sp-list-cell" ng-class="{selected: item.selected}" ng-click="go(item.targetTable, item)" ng-repeat="field in ::data.fields_array" data-field="{{::field}}" data-th="{{::data.column_labels[field]}}"><a href="javascript:void(0)" ng-if="$first" aria-label="${Open record}: {{::item[field].display_value}}">{{::item[field].display_value | limitTo : item[field].limit}}{{::item[field].display_value.length > item[field].limit ? '...' : ''}}</a><span ng-if="!$first">{{::item[field].display_value | limitTo : item[field].limit}}{{::item[field].display_value.length > item[field].limit ? '...' : ''}}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div ng-class="{'pruned-msg-filter-pad': (!options.show_breadcrumbs || !data.filter) && !data.list.length}" class="pruned-msg" ng-if="rowsWerePruned()">
+        <span ng-if="rowsPruned == 1">${{{rowsPruned}} row removed by security constraints}</span>
+        <span ng-if="rowsPruned > 1">${{{rowsPruned}} rows removed by security constraints}</span>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="panel-footer" ng-hide="options.hide_footer" ng-if="data.row_count" role="navigation" aria-label="${Pagination}">
+      <div class="btn-toolbar m-r pull-left">
+        <div class="btn-group">
+          <a href="javascript:void(0)" ng-click="setPageNum(data.p - 1)" ng-class="{'disabled': data.p == 1}" class="btn btn-default" aria-label="${Previous page} {{data.p == 1 ? '${disabled}' : ''}}" tabindex="{{(data.p == 1) ? -1 : 0}}"><i class="fa fa-chevron-left"></i></a>
+        </div>
+        <div ng-if="data.num_pages > 1 && data.num_pages < 20" class="btn-group">
+          <a ng-repeat="i in getNumber(data.num_pages) track by $index" ng-click="setPageNum($index + 1)" href="javascript:void(0)" ng-class="{active: ($index + 1) == data.p}" type="button" class="btn btn-default" aria-label="${Page} {{$index + 1}}" ng-attr-aria-current="{{($index + 1) == data.p ? 'page' : undefined}}">{{$index + 1}}</a>
+        </div>
+        <div class="btn-group">
+          <a href="javascript:void(0)" ng-click="setPageNum(data.p + 1)" ng-class="{'disabled': data.p == data.num_pages}" class="btn btn-default" aria-label="${Next page} {{data.p == data.num_pages ? '${disabled}' : ''}}" tabindex="{{(data.p == data.num_pages) ? -1 : 0}}"><i class="fa fa-chevron-right"></i></a>
+        </div>
+      </div>
+      <div class="m-t-xs panel-title">${Rows {{data.window_start + 1}} - {{ mathMin(data.window_end,data.row_count) }} of {{data.row_count}}}</div>
+
+      <span class="clearfix"></span>
+    </div>
+  </div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sp_widget_e9d52b622f3711100c1058492799b64e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.panel-heading {
+  padding-left: 8px;
+  border-color: transparent;
+}
+
+thead {
+  border-bottom: 1px solid #ddd;
+}
+
+table {
+  margin-bottom: 0;
+}
+
+.table &amp;gt; thead &amp;gt; tr &amp;gt; th {
+  border: 1px solid transparent;
+  cursor: pointer;
+  vertical-align: middle;
+
+  &amp;amp;:nth-child(2) {
+    border-left: none;
+  }
+
+
+
+  &amp;amp;:last-child {
+    border-right: none;
+  }
+}
+
+th i {
+  display: inline-block;
+  margin-left: 5px;
+  color: #A0A0A0;
+}
+
+div.data-table-high-contrast th i {
+ color: #363740; 
+}
+
+th .disabled{
+  color:#ddd;
+}
+
+.th-title {
+  display: inline-block;
+  color: #bdbdbd;
+}
+
+.sp-list-cell {
+  padding: 1.5rem;
+  width: 100px;
+  white-space: pre-wrap;
+}
+
+td span {
+  color: #363740;
+}
+
+.panel-body {
+  overflow: auto;
+  padding: 0px;
+}
+
+
+.selected {
+  color: #fff;
+  background-color: $data-table-selected;
+  border-color: 1px solid #fff;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+.pruned-msg {
+  padding-bottom: 10px;
+  padding-left: 4px;
+  text-align: center;
+}
+
+.pruned-msg-filter-pad {
+  padding-top:8px;
+}
+
+.filter-breadcrumbs {
+  padding-top: 3px;
+}
+
+.filter-breadcrumbs ~ .table {
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-toggle {
+  background: none;
+  padding: 0 0 4px 0;
+}
+
+.btn-group a {
+  background-color: #f5f5f5!important;
+  border-color: transparent!important;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance_table&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;table,filter,field_list,maximum_entries,order,order_by,order_direction,title,color,glyph,sp_page&lt;/field_list&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;hrs_sports_list&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;HRS Sports List&lt;/name&gt;&lt;option_schema&gt;[{"hint":"If enabled, show the list filter in the breadcrumbs of the data table","name":"enable_filter","default_value":"false","section":"Behavior","label":"Enable Filter","type":"boolean"}]&lt;/option_schema&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;andy.m&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-12-19 12:58:39&lt;/sys_created_on&gt;&lt;sys_id&gt;e9d52b622f3711100c1058492799b64e&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_name&gt;HRS Sports List&lt;/sys_name&gt;&lt;sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res"&gt;2171b6dc2f3bd1100c1058492799b6f5&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Hotel Reservation System"&gt;2171b6dc2f3bd1100c1058492799b6f5&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_e9d52b622f3711100c1058492799b64e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-12-21 05:57:46&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[  &lt;div class="panel panel-{{options.color}} b" ng-class="{'data-table-high-contrast': accessibilityModeEnabled}"&gt;
+    &lt;div class="panel-heading form-inline" ng-hide="options.hide_header"&gt;
+      &lt;span class="dropdown m-r-xs"&gt;
+        &lt;button aria-label="{{data.title || data.table_plural}} ${Context Menu}" class="btn dropdown-toggle glyphicon glyphicon-menu-hamburger" style="line-height: 1.4em" id="optionsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;&lt;/button&gt;
+        &lt;ul class="dropdown-menu" aria-labelledby="optionsMenu"&gt;
+          &lt;li ng-repeat="t in ::exportTypes"&gt;
+            &lt;a ng-if="!tinyUrlEnabled" ng-href="/{{data.table}}_list.do?{{::t.value}}&amp;sysparm_query={{data.exportQueryEncoded}}&amp;sysparm_view={{data.view}}&amp;sysparm_fields={{data.fields}}" target="_new" tabindex="-1"&gt;${Export as} {{::t.label}}&lt;/a&gt;
+            &lt;a ng-if="tinyUrlEnabled" ng-href="/{{data.table}}_list.do?{{::t.value}}&amp;sysparm_tiny={{tinyUrl}}" target="_new" tabindex="-1"&gt;${Export as} {{::t.label}}&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/span&gt;
+      &lt;h2 class="panel-title" style="display:inline"&gt;&lt;i ng-if="options.glyph" class="fa fa-{{options.glyph}} m-r"&gt;&lt;/i&gt;{{data.title || data.table_plural}}&lt;span class="sr-only"&gt;${table} - ${page} {{data.p}}&lt;/span&gt;&lt;/h2&gt;
+      &lt;button name="new" role="button" class="btn btn-primary btn-sm m-l-xs" ng-click="newRecord()" aria-label="${Create new record}"&gt;${Book}&lt;/button&gt;
+      &lt;div class="pull-right" ng-if="options.show_keywords"&gt;
+		&lt;form ng-if="data.hasTextIndex" ng-submit="setSearch(true)"&gt;
+        &lt;div class="input-group" role="presentation"&gt;
+          &lt;input type="text" name="datatable-search" ng-model="data.keywords" ng-model-options="{debounce:250}" class="form-control" placeholder="${Keyword Search}" aria-label="${Keyword Search}"&gt;
+          &lt;span class="input-group-btn"&gt;
+            &lt;button name="search" class="btn btn-default" type="submit" aria-label="${Search}"&gt;&lt;span class="glyphicon glyphicon-search"&gt;&lt;/span&gt;&lt;/button&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+      &lt;div class="clearfix"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- body --&gt;
+    &lt;div class="panel-body"&gt;
+      &lt;div ng-if="options.show_breadcrumbs &amp;&amp; (data.filter || data.enable_filter)" class="filter-breadcrumbs"&gt;
+	    		&lt;sp-widget widget="data.filterBreadcrumbs"&gt;&lt;/sp-widget&gt;
+      &lt;/div&gt;
+      &lt;div class="clearfix"&gt;&lt;/div&gt;
+      &lt;div class="alert alert-info" ng-if="!data.list.length &amp;&amp; !data.num_pages &amp;&amp; !data.invalid_table &amp;&amp; !loadingData"&gt;
+        ${No records in {{data.table_label}} &lt;span ng-if="data.filter"&gt;using that filter&lt;/span&gt;}
+      &lt;/div&gt;
+      &lt;div class="alert alert-info" ng-if="loadingData"&gt;
+          &lt;fa name="spinner" spin="true"&gt;&lt;/fa&gt; ${Loading data}...
+       &lt;/div&gt;
+      &lt;table class="table table-striped table-responsive" ng-if="data.list.length"&gt;
+        &lt;caption class="sr-only"&gt;{{data.title || data.table_plural}}&lt;/caption&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th ng-repeat="field in data.fields_array track by $index" class="text-nowrap" ng-click="setOrderBy(field)"
+             scope="col" role="columnheader" aria-sort="{{field == data.o ? (data.d == 'asc'? 'ascending': 'descending') : 'none'}}"&gt;
+              &lt;div class="th-title" title="${Sort by} {{field == data.o ? (data.d == 'asc' ?  '${Descending}': '${Ascending}') : '${Ascending}'}}" role="button" tabindex="0" aria-label="{{data.column_labels[field]}}"&gt;{{data.column_labels[field]}}&lt;/div&gt;
+              &lt;i class="fa" ng-if="field == data.o" ng-class="{'asc': 'fa-chevron-up', 'desc': 'fa-chevron-down'}[data.d]"&gt;&lt;/i&gt;
+            &lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr ng-repeat="item in data.list track by item.sys_id"&gt;
+            &lt;td role="{{$first ? 'rowheader' : 'cell'}}" class="pointer sp-list-cell" ng-class="{selected: item.selected}" ng-click="go(item.targetTable, item)" ng-repeat="field in ::data.fields_array" data-field="{{::field}}" data-th="{{::data.column_labels[field]}}"&gt;&lt;a href="javascript:void(0)" ng-if="$first" aria-label="${Open record}: {{::item[field].display_value}}"&gt;{{::item[field].display_value | limitTo : item[field].limit}}{{::item[field].display_value.length &gt; item[field].limit ? '...' : ''}}&lt;/a&gt;&lt;span ng-if="!$first"&gt;{{::item[field].display_value | limitTo : item[field].limit}}{{::item[field].display_value.length &gt; item[field].limit ? '...' : ''}}&lt;/span&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div ng-class="{'pruned-msg-filter-pad': (!options.show_breadcrumbs || !data.filter) &amp;&amp; !data.list.length}" class="pruned-msg" ng-if="rowsWerePruned()"&gt;
+        &lt;span ng-if="rowsPruned == 1"&gt;${{{rowsPruned}} row removed by security constraints}&lt;/span&gt;
+        &lt;span ng-if="rowsPruned &gt; 1"&gt;${{{rowsPruned}} rows removed by security constraints}&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- footer --&gt;
+    &lt;div class="panel-footer" ng-hide="options.hide_footer" ng-if="data.row_count" role="navigation" aria-label="${Pagination}"&gt;
+      &lt;div class="btn-toolbar m-r pull-left"&gt;
+        &lt;div class="btn-group"&gt;
+          &lt;a href="javascript:void(0)" ng-click="setPageNum(data.p - 1)" ng-class="{'disabled': data.p == 1}" class="btn btn-default" aria-label="${Previous page} {{data.p == 1 ? '${disabled}' : ''}}" tabindex="{{(data.p == 1) ? -1 : 0}}"&gt;&lt;i class="fa fa-chevron-left"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div ng-if="data.num_pages &gt; 1 &amp;&amp; data.num_pages &lt; 20" class="btn-group"&gt;
+          &lt;a ng-repeat="i in getNumber(data.num_pages) track by $index" ng-click="setPageNum($index + 1)" href="javascript:void(0)" ng-class="{active: ($index + 1) == data.p}" type="button" class="btn btn-default" aria-label="${Page} {{$index + 1}}" ng-attr-aria-current="{{($index + 1) == data.p ? 'page' : undefined}}"&gt;{{$index + 1}}&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+          &lt;a href="javascript:void(0)" ng-click="setPageNum(data.p + 1)" ng-class="{'disabled': data.p == data.num_pages}" class="btn btn-default" aria-label="${Next page} {{data.p == data.num_pages ? '${disabled}' : ''}}" tabindex="{{(data.p == data.num_pages) ? -1 : 0}}"&gt;&lt;i class="fa fa-chevron-right"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="m-t-xs panel-title"&gt;${Rows {{data.window_start + 1}} - {{ mathMin(data.window_end,data.row_count) }} of {{data.row_count}}}&lt;/div&gt;
+
+      &lt;span class="clearfix"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1196782315</payload_hash>
+        <record_name>HRS Sports List</record_name>
+        <reverted_from/>
+        <source>ffc00d872f3b51100c1058492799b65c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-21 05:57:46</sys_created_on>
+        <sys_id>7ba81c172f7791100c1058492799b60b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1853342620b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:57:46</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>73a81c17e9779110e80c4b42e423b30b</update_guid>
+        <update_guid_history>73a81c17e9779110e80c4b42e423b30b:-1196782315,0168d4170f77911012f78448a75db82d:-808167590,f8522bf631b35110b04299a0ee6540ff:0,5e41a7766cb3511006cb08db1556a8a0:-208184100,425b1ffe277351101190d8cfa1da522d:0,9ba407fad63351107fc862e79dd886b0:-208184100,2b14bfae0a371110d0ce8e7d285b7f70:-1799962264,de2d08f6ffb71110ea0cc98f55b37ac5:-208184100,2b14bfae0a371110d0ce8e7d285b7f70:-1799962264,51e3f3ae0f3711101eba3bf2954d778d:1492509996,f7d1736ee23711105886c75032d246b0:1393365396,49fe27ea763711106a20b4686f9a8e84:1323145433,a2de27ea80371110598f4dc2dbec524d:-431435633,280ee7aae9371110968d12ea14d3194a:564596297,2b6cef2a6c3711102645e0923f3ff9b2:1558802022,675c6f2a2e371110f58fb26b769de24d:-1332301004,30ebe32a50371110a4c6ecb3a15fa48b:-746493676,a74b6fe6a13711100e8b655dd6eda839:-1576975528,6a5627a2053711107c10a88e4db120c8:-713738817,4546a3a24b37111084dab5bfef9cc7d9:667017365,3416ef6242371110862caec369ba3042:1549673019,e1d52b624b3711103cb87c4f3243b850:7481209</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HRS Sports List">6a8dd85b2f7791100c1058492799b63e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-21 06:19:00</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>1cc7069a55cb42f8993eb554b83ce440</sys_id>
+        <sys_metadata>e9d52b622f3711100c1058492799b64e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HRS Sports List</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sp_widget_e9d52b622f3711100c1058492799b64e</sys_update_name>
+        <sys_update_version display_value="sp_widget_e9d52b622f3711100c1058492799b64e">7ba81c172f7791100c1058492799b60b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 06:19:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

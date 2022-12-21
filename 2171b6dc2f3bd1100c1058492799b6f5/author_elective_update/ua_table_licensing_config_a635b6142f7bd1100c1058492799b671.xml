@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="DELETE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_881199_hotel_res_hrs_user_profile</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>miguel.b</sys_created_by>
+        <sys_created_on>2022-12-12 09:39:57</sys_created_on>
+        <sys_id>a635b6142f7bd1100c1058492799b671</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_881199_hotel_res_hrs_user_profile</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>ua_table_licensing_config_a635b6142f7bd1100c1058492799b671</sys_update_name>
+        <sys_updated_by>miguel.b</sys_updated_by>
+        <sys_updated_on>2022-12-12 09:39:57</sys_updated_on>
+    </ua_table_licensing_config>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>ua_table_licensing_config_a635b6142f7bd1100c1058492799b671</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="INSERT_OR_UPDATE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_881199_hotel_res_hrs_user_profile</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>miguel.b</sys_created_by>
+        <sys_created_on>2022-12-12 09:39:57</sys_created_on>
+        <sys_id>a635b6142f7bd1100c1058492799b671</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_881199_hotel_res_hrs_user_profile</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>ua_table_licensing_config_a635b6142f7bd1100c1058492799b671</sys_update_name>
+        <sys_updated_by>miguel.b</sys_updated_by>
+        <sys_updated_on>2022-12-12 09:39:57</sys_updated_on>
+    </ua_table_licensing_config>
+</record_update>]]></payload>
+        <payload_hash>-111585258</payload_hash>
+        <record_name>x_881199_hotel_res_hrs_user_profile</record_name>
+        <reverted_from/>
+        <source>d80c5fe22ff311100c1058492799b63c</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-19 12:16:37</sys_created_on>
+        <sys_id>b13c1f262ff311100c1058492799b619</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1852a5083c40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-19 12:16:37</sys_updated_on>
+        <type>Table Subscription Configuration</type>
+        <update_guid>393c1f26c3f311108248ede21601170c</update_guid>
+        <update_guid_history>393c1f26c3f311108248ede21601170c:0,3a1aa512eb7f51109d98fca25fa0dc6d:385234868</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-21 04:54:20</sys_created_on>
+        <sys_db_object display_value="" name="ua_table_licensing_config">ua_table_licensing_config</sys_db_object>
+        <sys_id>5b9e329abfb046588cf77237f3acb490</sys_id>
+        <sys_metadata>a635b6142f7bd1100c1058492799b671</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_881199_hotel_res_hrs_user_profile</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>ua_table_licensing_config_a635b6142f7bd1100c1058492799b671</sys_update_name>
+        <sys_update_version display_value="ua_table_licensing_config_a635b6142f7bd1100c1058492799b671">b13c1f262ff311100c1058492799b619</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 04:54:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

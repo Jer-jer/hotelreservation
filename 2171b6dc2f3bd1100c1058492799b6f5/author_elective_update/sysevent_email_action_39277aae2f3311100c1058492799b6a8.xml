@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="DELETE">
+        <action_insert>true</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_881199_hotel_res_hotel_reservations</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Good Day,</p>
+<p>This Email is notifying you that a Room has been Booked</p>
+<p><br />Room: ${room}</p>
+<p>Guest Name: ${guest_name}</p>
+<p>&nbsp;</p>
+<p>Please Check for Clarification or Confirmation.</p>
+<p>Thank You</p>
+<p>&nbsp;</p>
+<p>This is an Automated Email, please do not reply or resend</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Room Booked</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups name="Hotel Reservation Receptionists">d5c01ff52f3711100c1058492799b6be</recipient_groups>
+        <recipient_users>posztvge@sharklasers.com</recipient_users>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>A Room is Booked</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>miguel.b</sys_created_by>
+        <sys_created_on>2022-12-19 09:39:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>39277aae2f3311100c1058492799b6a8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Room Booked</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sysevent_email_action_39277aae2f3311100c1058492799b6a8</sys_update_name>
+        <sys_updated_by>miguel.b</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:43:22</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Employee notification template">1462e7ca918a3010f877b1d70a4d6a3d</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sysevent_email_action_39277aae2f3311100c1058492799b6a8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_email_action"&gt;&lt;sysevent_email_action action="INSERT_OR_UPDATE"&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced_condition/&gt;&lt;affected_field_on_event/&gt;&lt;category display_value="Uncategorized" name="Uncategorized"&gt;c97d83137f4432005f58108c3ffa917a&lt;/category&gt;&lt;collection&gt;x_881199_hotel_res_hotel_reservations&lt;/collection&gt;&lt;condition/&gt;&lt;content_type&gt;text/html&lt;/content_type&gt;&lt;default_interval/&gt;&lt;description/&gt;&lt;digest_from/&gt;&lt;digest_html/&gt;&lt;digest_reply_to/&gt;&lt;digest_separator_html&gt;&lt;![CDATA[&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;]]&gt;&lt;/digest_separator_html&gt;&lt;digest_separator_text&gt;&lt;![CDATA[\n--------------------------------------------------------------------------------\n]]&gt;&lt;/digest_separator_text&gt;&lt;digest_subject/&gt;&lt;digest_template/&gt;&lt;digest_text/&gt;&lt;digestable&gt;false&lt;/digestable&gt;&lt;event_name&gt;activate.life.cycle.migration&lt;/event_name&gt;&lt;event_parm_1&gt;false&lt;/event_parm_1&gt;&lt;event_parm_2&gt;false&lt;/event_parm_2&gt;&lt;exclude_delegates&gt;false&lt;/exclude_delegates&gt;&lt;force_delivery&gt;false&lt;/force_delivery&gt;&lt;from/&gt;&lt;generation_type&gt;engine&lt;/generation_type&gt;&lt;importance/&gt;&lt;include_attachments&gt;false&lt;/include_attachments&gt;&lt;item&gt;event.parm1&lt;/item&gt;&lt;item_table/&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;p&gt;Good Day,&lt;/p&gt;
+&lt;p&gt;This Email is notifying you that a Room has been Booked&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;Room: ${room}&lt;/p&gt;
+&lt;p&gt;Guest Name: ${guest_name}&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Please Check for Clarification or Confirmation.&lt;/p&gt;
+&lt;p&gt;Thank You&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;This is an Automated Email, please do not reply or resend&lt;/p&gt;]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;Room Booked&lt;/name&gt;&lt;omit_watermark&gt;false&lt;/omit_watermark&gt;&lt;order&gt;100&lt;/order&gt;&lt;push_message_only&gt;false&lt;/push_message_only&gt;&lt;recipient_fields/&gt;&lt;recipient_groups name="Hotel Reservation Receptionists"&gt;d5c01ff52f3711100c1058492799b6be&lt;/recipient_groups&gt;&lt;recipient_users&gt;posztvge@sharklasers.com&lt;/recipient_users&gt;&lt;reply_to/&gt;&lt;send_self&gt;true&lt;/send_self&gt;&lt;sms_alternate/&gt;&lt;style/&gt;&lt;subject&gt;A Room is Booked&lt;/subject&gt;&lt;subscribable&gt;false&lt;/subscribable&gt;&lt;sys_class_name&gt;sysevent_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;miguel.b&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-12-19 09:39:37&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;39277aae2f3311100c1058492799b6a8&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Room Booked&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res"&gt;2171b6dc2f3bd1100c1058492799b6f5&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Hotel Reservation System"&gt;2171b6dc2f3bd1100c1058492799b6f5&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_action_39277aae2f3311100c1058492799b6a8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;miguel.b&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-12-21 05:43:22&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;template display_value="Employee notification template"&gt;1462e7ca918a3010f877b1d70a4d6a3d&lt;/template&gt;&lt;type&gt;email&lt;/type&gt;&lt;weight&gt;0&lt;/weight&gt;&lt;/sysevent_email_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2114320207</payload_hash>
+        <record_name>Room Booked</record_name>
+        <reverted_from/>
+        <source>1278405f2ff391100c1058492799b64d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>miguel.b</sys_created_by>
+        <sys_created_on>2022-12-21 05:43:22</sys_created_on>
+        <sys_id>b865dc9f2f3791100c1058492799b669</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185333532cf0000001</sys_recorded_at>
+        <sys_updated_by>miguel.b</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:43:22</sys_updated_on>
+        <type>Notification</type>
+        <update_guid>f065dc9f20379110b7956814be1ddf69</update_guid>
+        <update_guid_history>f065dc9f20379110b7956814be1ddf69:-2114320207,6652abf6deb3511076a1c1af2ee6efd2:0,e2c163b642b351104cc7a45f6a7238b1:-1846557071,d71dbee2e97311103f5dc2b70a920432:-1493001755,ba1c532600f31110a52dc388b0ff07b6:-1846557071,d71dbee2e97311103f5dc2b70a920432:-1493001755,0a7b7ea2b0731110f08c9cd7e544a8c3:257395167,0a48f2eede33111081f1d893e1382170:1790244955</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>miguel.b</sys_created_by>
+        <sys_created_on>2022-12-21 05:52:37</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_action">sysevent_email_action</sys_db_object>
+        <sys_id>aef0920baa8e47e1805ceb90cedd3859</sys_id>
+        <sys_metadata>39277aae2f3311100c1058492799b6a8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Room Booked</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent display_value="HRS Reservations">66b3c69d2f7751100c1058492799b64d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sysevent_email_action_39277aae2f3311100c1058492799b6a8</sys_update_name>
+        <sys_update_version display_value="sysevent_email_action_39277aae2f3311100c1058492799b6a8">b865dc9f2f3791100c1058492799b669</sys_update_version>
+        <sys_updated_by>miguel.b</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:52:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

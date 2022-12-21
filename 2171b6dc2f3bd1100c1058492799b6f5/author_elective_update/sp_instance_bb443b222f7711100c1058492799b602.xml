@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">8a51eb2e2ff311100c1058492799b641</sp_column>
+        <sp_widget display_value="HRS Sports List">e9d52b622f3711100c1058492799b64e</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>andy.m</sys_created_by>
+        <sys_created_on>2022-12-19 14:01:54</sys_created_on>
+        <sys_id>bb443b222f7711100c1058492799b602</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Sports List</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_update_name>sp_instance_bb443b222f7711100c1058492799b602</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:57:12</sys_updated_on>
+        <title>Sports List</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=bb443b222f7711100c1058492799b602"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</application>
+        <file_path/>
+        <instance_id>b6528d11db87d5140b9d21c40596192a</instance_id>
+        <instance_name>dev143370</instance_name>
+        <name>sp_instance_bb443b222f7711100c1058492799b602</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">8a51eb2e2ff311100c1058492799b641</sp_column><sp_widget display_value="HRS Sports List">e9d52b622f3711100c1058492799b64e</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>andy.m</sys_created_by><sys_created_on>2022-12-19 14:01:54</sys_created_on><sys_id>bb443b222f7711100c1058492799b602</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sports List</sys_name><sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package><sys_policy/><sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope><sys_update_name>sp_instance_bb443b222f7711100c1058492799b602</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-12-21 05:57:12</sys_updated_on><title>Sports List</title><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=bb443b222f7711100c1058492799b602"/></record_update>]]></payload>
+        <payload_hash>1735825937</payload_hash>
+        <record_name>Sports List</record_name>
+        <reverted_from/>
+        <source>ffc00d872f3b51100c1058492799b65c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-21 05:57:12</sys_created_on>
+        <sys_id>5f88d0172f7791100c1058492799b6af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1853341dd160000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:57:12</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>9788d01726779110c8e742dbbe154faf</update_guid>
+        <update_guid_history>9788d01726779110c8e742dbbe154faf:1735825937,18522bf61bb35110970cdeb7e26edc71:0,8e41a77696b351104fd7aa8d006f8a47:-401970003,7d5bdbfe3273511090f32cebfe6b16ce:0,7ea407fa1233511098801f539d461c63:-401970003,77443b22767711103ff7444ea319b704:54918938,3d2d08f6b6b71110d8cbdbac11994a80:-401970003,77443b22767711103ff7444ea319b704:54918938</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Sports List">b51990572f7791100c1058492799b6c9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-21 05:59:33</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>91e9ffbba53a46c480629e937d1c8ca1</sys_id>
+        <sys_metadata>bb443b222f7711100c1058492799b602</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sports List</sys_name>
+        <sys_package display_value="Hotel Reservation System" source="x_881199_hotel_res">2171b6dc2f3bd1100c1058492799b6f5</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hotel Reservation System">2171b6dc2f3bd1100c1058492799b6f5</sys_scope>
+        <sys_scope_delete display_value="">335afa01cd914795ac3cfc5babd8d0e1</sys_scope_delete>
+        <sys_update_name>sp_instance_bb443b222f7711100c1058492799b602</sys_update_name>
+        <sys_update_version display_value="sp_instance_bb443b222f7711100c1058492799b602">5f88d0172f7791100c1058492799b6af</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-21 05:59:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
